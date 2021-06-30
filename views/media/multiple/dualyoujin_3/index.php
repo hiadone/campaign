@@ -515,10 +515,17 @@ $this->managelayout->add_css("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1
             .form_container .btn_popup {
                 font-size: 16px;
             }
+            .img_gif_box{
+                padding : 20px;
+            }
         }
         @media screen and (max-width: 480px){
             .comment_container .comment_text {
                 font-size: 16px;
+            }
+
+            .img_gif_box{
+                padding : 11px;
             }
         }
 
@@ -660,6 +667,8 @@ $this->managelayout->add_css("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1
       background-repeat: repeat-x;
       border-color: #9acfea;
     }
+
+    .
         </style>
     <?php if(element('multi_code',$view)==='adtive' || element('multi_code',$view)==='adtive2'){ ?>
                          <!-- 타겟푸시_L6444448 -->
@@ -887,12 +896,12 @@ $this->managelayout->add_css("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1
 <!--             <a href="#formContainer" class="btn_img btn_goform"><img src="<?=$AD_DIR?>/images/btn_goform.png" class="img" alt="자세하게 알아보기"></a>
             <button class="btn_img btn_close" type="button" onclick="closeGoFormBtn();"><img src="<?=$AD_DIR?>/images/btn_fixed_close.png" class="img" alt="닫기"></button> -->
         </div>
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/u1.jpg?u=<?php echo date('Ymdhms') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u1.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
         
         
         
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/u1_1.jpg?u=<?php echo date('Ymdhms') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/u1.gif?u=<?php echo date('Ymdhms') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u1_1.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u1.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
         
         <!-- <div class="img_box"><img src="<?=$AD_DIR?>/images/du_1_1.jpg" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div> -->
         <section class="inDB">
@@ -963,19 +972,38 @@ $this->managelayout->add_css("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1
             <?php echo form_close(); ?>
         </section>
 
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/u2.jpg?u=<?php echo date('Ymdhms') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u2.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
 
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/u3.jpg?u=<?php echo date('Ymdhms') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u3_1_1.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
 
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/u6.jpg?u=<?php echo date('Ymdhms') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box img_gif_box" style="background-color:#453325">
+            <div style="font-size: 16px;color:#fff;font-weight: bold;margin-bottom:5px;">① 3.0 모드 (진피층 하부자극)</div>
+            
+            <img src="<?=$AD_DIR?>/images/u3_2.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box img_gif_box" style="padding-top: 5px;background-color:#453325">
+            <div style="font-size: 16px;color:#fff;font-weight: bold;margin-bottom:5px;">② 4.5 모드 (근막층 자극)</div>
+            <img src="<?=$AD_DIR?>/images/u3_3.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box img_gif_box" style="padding-top: 5px;background-color:#453325">
+            <div style="font-size: 16px;color:#fff;font-weight: bold;margin-bottom:5px;">③ Dual 모드 (진피층하부 & 근막층 자극)</div>
+            <img src="<?=$AD_DIR?>/images/u3_4.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
 
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/u4.jpg?u=<?php echo date('Ymdhms') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u3_1_2.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
 
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/u5.jpg?u=<?php echo date('Ymdhms') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box img_gif_box" style="background-color:#453325">
+            
+            <img src="<?=$AD_DIR?>/images/u3_5.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box"style="padding-bottom: 10px;background-color:#453325"><img src="<?=$AD_DIR?>/images/u3_1_3.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u6.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u4.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u5.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
 
 
 
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/u7.jpg?u=<?php echo date('Ymdhms') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u7.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
         
         
 

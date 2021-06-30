@@ -516,10 +516,16 @@ $this->managelayout->add_css("https://cdn.jsde
             .form_container .btn_popup {
                 font-size: 16px;
             }
+            .img_gif_box{
+                padding : 20px;
+            }
         }
         @media screen and (max-width: 480px){
             .comment_container .comment_text {
                 font-size: 16px;
+            }
+            .img_gif_box{
+                padding : 11px;
             }
         }
 
@@ -871,7 +877,28 @@ $this->managelayout->add_css("https://cdn.jsde
         <div class="img_box " style="margin-top:20px;"><img src="<?=$AD_DIR?>/images/du_4.jpg?u=<?php echo date('Ymdhms') ?>" alt="듀얼소닉 인체 시험결과" class="img"></div>
         
         
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/du_5.jpg?u=<?php echo date('Ymdhms') ?>" alt="감히 따라올 수 없는 듀얼소닉 기술의 품격" class="img"></div>
+        <!-- <div class="img_box"><img src="<?=$AD_DIR?>/images/du_5.jpg?u=<?php echo date('Ymdhms') ?>" alt="감히 따라올 수 없는 듀얼소닉 기술의 품격" class="img"></div> -->
+
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u3_2_1.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box img_gif_box" style="">
+            <div style="font-size: 16px;font-weight: bold;margin-bottom:5px;">① 3.0 모드 (진피층 하부자극)</div>
+            
+            <img src="<?=$AD_DIR?>/images/u3_2.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box img_gif_box" style="padding-top: 5px;">
+            <div style="font-size: 16px;font-weight: bold;margin-bottom:5px;">② 4.5 모드 (근막층 자극)</div>
+            <img src="<?=$AD_DIR?>/images/u3_3.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box img_gif_box" style="padding-top: 5px;">
+            <div style="font-size: 16px;font-weight: bold;margin-bottom:5px;">③ Dual 모드 (진피층하부 & 근막층 자극)</div>
+            <img src="<?=$AD_DIR?>/images/u3_4.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u3_2_2.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box img_gif_box" style="">
+            
+            <img src="<?=$AD_DIR?>/images/u3_5.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box"style="padding-bottom: 10px;"><img src="<?=$AD_DIR?>/images/u3_2_3.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
         
         <div class="img_box"><img src="<?=$AD_DIR?>/images/u6.jpg" alt="듀얼소닉 구성" class="img"></div>
         

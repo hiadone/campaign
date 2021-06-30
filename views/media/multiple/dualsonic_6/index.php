@@ -506,6 +506,15 @@
             .form_container .btn_popup {
                 font-size: 16px;
             }
+            .img_gif_box{
+                padding : 20px;
+            }
+        }
+        @media screen and (max-width: 480px){
+            
+            .img_gif_box{
+                padding : 11px;
+            }
         }
 
         .inDB,
@@ -678,7 +687,7 @@
             <!-- <a href="#formContainer" class="btn_img btn_goform"><img src="<?=$AD_DIR?>/images/btn_goform.png" class="img" alt="자세하게 알아보기"></a>
             <button class="btn_img btn_close" type="button" onclick="closeGoFormBtn();"><img src="<?=$AD_DIR?>/images/btn_fixed_close.png" class="img" alt="닫기"></button> -->
         </div>
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/du_1.jpg?u=<?php echo date('Ymdhms') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/du_1.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
         
         <!-- <div class="img_box"><img src="<?=$AD_DIR?>/images/du_1_1.jpg" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div> -->
 
@@ -751,12 +760,33 @@
         </section>
 
         <div class="img_box"><img src="<?=$AD_DIR?>/images/du_2.jpg" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
-        <div class="img_box" style="margin-bottom:10px;"><img src="<?=$AD_DIR?>/images/du_3.jpg?u=<?php echo date('Ymdhms') ?>" alt="임상 시험" class="img"></div>
+        <div class="img_box" style="margin-bottom:10px;"><img src="<?=$AD_DIR?>/images/du_3.jpg?u=<?php echo date('Ymd') ?>" alt="임상 시험" class="img"></div>
         
-        <div class="img_box " style="margin-top:20px;"><img src="<?=$AD_DIR?>/images/du_4.jpg?u=<?php echo date('Ymdhms') ?>" alt="듀얼소닉 인체 시험결과" class="img"></div>
+        <div class="img_box " style="margin-top:20px;"><img src="<?=$AD_DIR?>/images/du_4.jpg?u=<?php echo date('Ymd') ?>" alt="듀얼소닉 인체 시험결과" class="img"></div>
         
         
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/du_5.jpg?u=<?php echo date('Ymdhms') ?>" alt="감히 따라올 수 없는 듀얼소닉 기술의 품격" class="img"></div>
+        <!-- <div class="img_box"><img src="<?=$AD_DIR?>/images/du_5.jpg?u=<?php echo date('Ymd') ?>" alt="감히 따라올 수 없는 듀얼소닉 기술의 품격" class="img"></div> -->
+        
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u3_2_1.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box img_gif_box" style="">
+            <div style="font-size: 16px;font-weight: bold;margin-bottom:5px;">① 3.0 모드 (진피층 하부자극)</div>
+            
+            <img src="<?=$AD_DIR?>/images/u3_2.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box img_gif_box" style="padding-top: 5px;">
+            <div style="font-size: 16px;font-weight: bold;margin-bottom:5px;">② 4.5 모드 (근막층 자극)</div>
+            <img src="<?=$AD_DIR?>/images/u3_3.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box img_gif_box" style="padding-top: 5px;">
+            <div style="font-size: 16px;font-weight: bold;margin-bottom:5px;">③ Dual 모드 (진피층하부 & 근막층 자극)</div>
+            <img src="<?=$AD_DIR?>/images/u3_4.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u3_2_2.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box img_gif_box" style="">
+            
+            <img src="<?=$AD_DIR?>/images/u3_5.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box"style="padding-bottom: 10px;"><img src="<?=$AD_DIR?>/images/u3_2_3.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
         
         <div class="img_box"><img src="<?=$AD_DIR?>/images/u6.jpg" alt="듀얼소닉 구성" class="img"></div>
 
@@ -774,7 +804,7 @@
         </div> -->
         <div class="img_box"><img src="<?=$AD_DIR?>/images/du_7.jpg" alt="프로페셔널 vs 럭셔리" class="img"></div>
         
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/du_8.jpg?u=<?php echo date('Ymdhms') ?>" alt="듀얼소닉 실제사용자 후기" class="img"></div>
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/du_8.jpg?u=<?php echo date('Ymd') ?>" alt="듀얼소닉 실제사용자 후기" class="img"></div>
 
         <!-- gif04 -->
         <!-- <div class="gif04">
@@ -793,12 +823,12 @@
         
         
         <div class="img_box"><img src="<?=$AD_DIR?>/images/du_9.jpg" alt="듀얼소닉 수상 내역" class="img"></div>   
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/du_9_1.jpg?u=<?php echo date('Ymdhms') ?>" alt="듀얼소닉 수상 내역" class="img"></div>             
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/du_9_1.jpg?u=<?php echo date('Ymd') ?>" alt="듀얼소닉 수상 내역" class="img"></div>             
         <!-- <div class="img_box"><img src="<?=$AD_DIR?>/images/du_10.jpg" alt="듀얼소닉 수상 내역" class="img"></div>         -->
 
         
         
-        <!-- <div class="img_box"><img src="<?=$AD_DIR?>/images/event_8.gif?u=<?php echo date('Ymdhms') ?>" alt="이벤트" class="img"></div> -->
+        <!-- <div class="img_box"><img src="<?=$AD_DIR?>/images/event_8.gif?u=<?php echo date('Ymd') ?>" alt="이벤트" class="img"></div> -->
         <!-- <div class="img_box"><img src="<?=$AD_DIR?>/images/du_17_1.jpg" alt="렌탈신청혜택_1" class="img"></div> -->
         <!-- <div class="img_box"><img src="<?=$AD_DIR?>/images/du_1_1.jpg" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div> -->
         <section class="inDB">

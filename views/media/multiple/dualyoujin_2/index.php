@@ -515,10 +515,16 @@ $this->managelayout->add_css("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1
             .form_container .btn_popup {
                 font-size: 16px;
             }
+            .img_gif_box{
+                padding : 20px;
+            }
         }
         @media screen and (max-width: 480px){
             .comment_container .comment_text {
                 font-size: 16px;
+            }
+            .img_gif_box{
+                padding : 11px;
             }
         }
 
@@ -965,7 +971,28 @@ $this->managelayout->add_css("https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1
 
         <div class="img_box"><img src="<?=$AD_DIR?>/images/u2.jpg?u=<?php echo date('Ymdhms') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
 
-        <div class="img_box"><img src="<?=$AD_DIR?>/images/u3.jpg?u=<?php echo date('Ymdhms') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <!-- <div class="img_box"><img src="<?=$AD_DIR?>/images/u3.jpg?u=<?php echo date('Ymdhms') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div> -->
+
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u3_1_1.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box img_gif_box" style="background-color:#453325">
+            <div style="font-size: 16px;color:#fff;font-weight: bold;margin-bottom:5px;">① 3.0 모드 (진피층 하부자극)</div>
+            
+            <img src="<?=$AD_DIR?>/images/u3_2.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box img_gif_box" style="padding-top: 5px;background-color:#453325">
+            <div style="font-size: 16px;color:#fff;font-weight: bold;margin-bottom:5px;">② 4.5 모드 (근막층 자극)</div>
+            <img src="<?=$AD_DIR?>/images/u3_3.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+        <div class="img_box img_gif_box" style="padding-top: 5px;background-color:#453325">
+            <div style="font-size: 16px;color:#fff;font-weight: bold;margin-bottom:5px;">③ Dual 모드 (진피층하부 & 근막층 자극)</div>
+            <img src="<?=$AD_DIR?>/images/u3_4.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box"><img src="<?=$AD_DIR?>/images/u3_1_2.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box img_gif_box" style="background-color:#453325">
+            
+            <img src="<?=$AD_DIR?>/images/u3_5.gif?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
+
+        <div class="img_box"style="padding-bottom: 10px;background-color:#453325"><img src="<?=$AD_DIR?>/images/u3_1_3.jpg?u=<?php echo date('Ymd') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
 
         <div class="img_box"><img src="<?=$AD_DIR?>/images/u6.jpg?u=<?php echo date('Ymdhms') ?>" alt="수시로 가던 피부과, 이제 절대 안가요!" class="img"></div>
 
