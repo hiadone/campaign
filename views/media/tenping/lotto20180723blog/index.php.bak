@@ -1,0 +1,328 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<title>로또머니</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="no">
+		<meta name="robots" content="index,follow">
+		<meta name="format-detection" content="telephone=no">
+		
+		<link type="text/css" rel="stylesheet" href="<?=$AD_DIR?>/css/style.css?v=1">
+
+		<script src="//code.jquery.com/jquery-latest.min.js"></script>
+
+		<SCRIPT LANGUAGE="Javascript">
+			$(function() {
+				$(".inputs").keyup (function () {
+					var charLimit = $(this).attr("maxlength");
+					if (this.value.length >= charLimit) {
+						$(this).next('.inputs').focus();
+						return false;
+					}
+				});
+			});
+		</SCRIPT>
+
+		<script language = "javascript"> 
+            
+			var stateObj = { forward: "forward" };
+			if (window.history && window.history.pushState) {
+				
+				if('state' in window.history && window.history.state !== null) window.history.replaceState(stateObj, null, document.location.href);
+				else window.history.pushState(stateObj, null, document.location.href);
+			
+				var popped = ('state' in window.history && window.history.state !== null), initialURL = location.href;
+
+				$(window).bind('popstate', function (event) {
+				  // Ignore inital popstate that some browsers fire on page load
+				  var initialPop = !popped && location.href == initialURL
+				  popped = true
+				  if (initialPop) return;             
+
+				  parent.top.location.replace("http://ad1.newsissue.co.kr/?CODE_NAME=LOTTO20180917&MEDIA_CODE");
+				});
+			 }
+	 </script>
+
+	</head>
+<body>
+
+
+<div class="container">
+	<nav>
+		<ul>
+			<li>뉴스홈</li>
+			<li class="active">속보</li>
+			<li>정치</li>
+			<li>경제</li>
+			<li>사회</li>
+			<li>
+				<div class="form-inline">
+					<input type="text" class="form-class"> <button type="button" class="btn btn-su">검색</button>
+				</div>
+			</li>
+		</ul>
+	</nav>
+
+	<header>
+		<p>뉴스홈 > 속보</p>
+		<h1><mark>[화제]</mark> 유명 방송인으로 인해 관계자 측 "로또분석 통해 당첨 확률 증가 첫 인정.."?</h1>
+		<p><mark><b>- 패턴흐름만 알면 17배 당첨확률높아져</b></mark></p>
+		<p><mark><b>- 최근 장안의 화제 로또 연속당첨릴레이 진행..</b></mark></p>
+		<div class="header">
+			<div class="headerdate">
+				기사입력 : 2018-8-9 09:13
+			</div>
+			<div class="headersns">
+				<img src="<?=$AD_DIR?>/images/sns.jpg">
+			</div>
+		</div>
+	</header>
+
+	<main>
+	<section>
+		최근 유명 방송인 박 씨(29)가 생방송으로 2등 한장,3,5등 한장 총 두장 당첨을 인증하면서 화제가 되고 있다.<br><br>
+
+		김씨는 아는 지인이 소개해준 <mark>로또분석 번호 받기 후기를 전하고자 생방송을 하였고 첫 방송부터 당첨이 되면서 논란</mark>이 되었다.
+	</section>
+
+	<section><img src="<?=$AD_DIR?>/images/new.jpg"></section>
+
+	<section>
+		<p class="t-center"><b>좌) 온라인 방송인 박 씨(29)<br>우) 생방송으로 보여줬던 2등 당첨영수증</b></p>
+		<br>
+		네티즌들은 "조작 아니야?, 매주 구매해도 3등도 나오지 않았는데.." 등 많은 댓글들이 쏟아졌지만 수령금액 내역을 증명하면서 확실한 후기를 전했다고 한다.
+	</section>
+
+	<section><img src="<?=$AD_DIR?>/images/img2.png"></section>
+	<section><p class="t-center"><b><mark>*실제</mark> 온라인에 인증한 3등, 5등 거래내역 확인증</b></p></section>
+
+	<section>
+		국내 최고의 개발자들이 모여 로또솔루션으로 현재 눈에 띄는 당첨률을 보여주고 있다.<br><br>
+
+		<p class="t-center">2016년 6주 안에 3등이상 당첨률 <span style="color:red;">47.7%</span><br>
+		2017년 6주 안에 3등이상 당첨률 <span style="color:red;">54.7%</span><br>
+		2018년 6주 안에 3등이상 당첨률 <span style="color:red;">68.7%</span>
+		</p><br><br>
+
+		모두들 말이 안된다고 생각했던 로또분석은 이미 국내에 확실한 결과로 입증하고 있으며 관계자는 이번주만 조건없이 분석번호를 제공해준다고 하니 참여해보길 바란다.<br><br>
+
+		<p>▼[하단 로또분석번호 무료제공 © 머니기술연구원]</p>
+	</section>
+
+	<section class="inDB">
+		<div class="inbox">
+			<p><img src="<?=$AD_DIR?>/images/db_img03.jpg"></p>
+			<table>
+				<colgroup>
+					<col width="50px">
+					<col width="">
+				</colgroup>
+				<tbody>
+					<tr>
+						<td colspan="2" style="padding-top:20px;"></td>
+					</tr>
+					<!-- <tr>
+						<th>이름</th>
+						<td><input type="text" class="form-class" name="M_NAME" id="M_NAME"></td>
+					</tr>
+					<tr>
+						<th>나이</th>
+						<td><input type="number" class="form-class" name="M_AGE" id="M_AGE" style="width:70px; float:left;"> <label style="position:relative;float:left; top:10px; left:10px;">세</label></td>
+					</tr> //-->
+					<tr>
+						<th>연락처</th>
+						<td>
+							<input type="tel" id="HP_1" name="Phone1" size="3" maxlength="3" class="form-class inputs"><input type="tel" id="HP_2" name="Phone2" size="4" maxlength="4" class="form-class inputs"><input type="tel" id="HP_3" class="form-class inputs" name="Phone3" size="4" maxlength="4">
+						</td>
+					</tr>
+					<!-- <tr>
+						<th>문의사항</th>
+						<td>
+							<textarea class="form-class" rows="5" id="M_QUESTION"></textarea>
+						</td>
+					</tr> -->
+					<tr>
+						<td colspan="2" class="t-center">
+							<div class="checkbox">
+								<input type="checkbox" name="" id="agree" checked> <label for="agree">개인정보 수집 및 이용동의</label>
+							</div>
+							<p style="padding:10px 0;font-size:12px;">*별도의 회원가입 없이 <span style="color:red;">서비스</span> 정보 제공 후<br>개인정보는 안전하게 폐기 됩니다.</p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="t-center">
+							<p><a href="javascript:;" onclick="APPLY_SUBMIT();"><img src="<?=$AD_DIR?>/images/btn01.gif"></a></p>
+							<p><img src="<?=$AD_DIR?>/images/db_img3.gif" style="width:90px;"></p>
+							<p><img src="<?=$AD_DIR?>/images/db_1.gif"></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+	</main>
+
+	<footer>
+		<div class="panel">
+			<div class="panel-header">
+				<div class="p-left">
+					<b>댓글 <span style="color:red;">82</span></b>
+				</div>
+				<div class="p-right">
+					<img src="<?=$AD_DIR?>/images/write.jpg" style="width:70px;">
+				</div>
+				<div class="clear"></div>
+				<nav style="margin:8px -10px 0;">
+					<p class="p-left" style="display:inline-block;width:50%;color:#000; background-color:#f7f7f7;text-align:center;font-size:14px;padding:10px 0;border-right:1px solid #ddd;border-bottom:1px solid #ddd;">
+						<b>호감순</b>
+					</p>
+					<p class="p-right" style="color:red;display:inline-block;width:50%;text-align:center;padding:10px 0;">
+						<b>최신순</b>
+					</p>
+				</nav>
+				<div class="clear"></div>
+			</div>
+			
+			<div class="panel-body">
+				<h3>hasd***</h3>
+				<p>안녕하세요 제가 온라인커뮤니티에 올린 김성배 라고 합니다. 로또는 부동산, 주식보다 소액투자라면 투자라고 할수 있겠지만 너무 신기하게도 문자로 온 번호로만 구매를 했는데 4번이나 당첨이 됐네요.</p>
+				<p class="t-date">2018-08-09 오전 11:51 | 신고</p>
+			</div>
+			<div class="panel-footer">
+				<p class="p-left">
+					<img src="<?=$AD_DIR?>/images/rere.jpg">
+				</p>
+				<p class="p-right" style="color:red;">
+					<img src="<?=$AD_DIR?>/images/up1.jpg">
+					<img src="<?=$AD_DIR?>/images/down1.jpg">
+				</p>
+				<div class="clear"></div>
+			</div>
+
+			<div class="panel-body">
+				<h3>bans***</h3>
+				<p><img src="<?=$AD_DIR?>/images/img03.jpg" style="vertical-align:middle;"></p>
+				<p>제가 궁금한 사항이 몇가지 있어서요. 제가 다른 업체도 이용을 해봤지만 여기만한게 없네요. 처음엔 다 똑같겠지라고 했는데 월등히 차이가 나네요,, 감사합니다</p>
+				<p class="t-date">2018-08-09 오후 13:52 | 신고</p>
+			</div>
+			<div class="panel-footer">
+				<p class="p-left">
+					<img src="<?=$AD_DIR?>/images/rere.jpg">
+				</p>
+				<p class="p-right" style="color:red;">
+					<img src="<?=$AD_DIR?>/images/up2.jpg">
+					<img src="<?=$AD_DIR?>/images/down2.jpg">
+				</p>
+				<div class="clear"></div>
+			</div>
+
+			<div class="panel-body">
+				<h3>tp1081**</h3>
+				<p>제가 5년동안 해본결과 말씀드릴게요, 인천 사는 40대 남성입니다. 다른 곳 어쩌다가 4등 한번? 당첨 됐는데이쪽 믿고 진행을 해봤는데 확실하네요 감사합니다.</p>
+				<p class="t-date">2018-08-08 오후 17:19 | 신고</p>
+			</div>
+			<div class="panel-footer">
+				<p class="p-left">
+					<img src="<?=$AD_DIR?>/images/rere.jpg">
+				</p>
+				<p class="p-right" style="color:red;">
+					<img src="<?=$AD_DIR?>/images/42.jpg">
+					<img src="<?=$AD_DIR?>/images/down.jpg">
+				</p>
+				<div class="clear"></div>
+			</div>
+
+			<div class="panel-body">
+				<h3>dkiejw**</h3>
+				<p>이번주도 좋은번호 기도합니다. 다들 파이팅 하자구요</p>
+				<p class="t-date">2018-08-08 오후 17:19 | 신고</p>
+			</div>
+			<div class="panel-footer">
+				<p class="p-left">
+					<img src="<?=$AD_DIR?>/images/rere.jpg">
+				</p>
+				<p class="p-right" style="color:red;">
+					<img src="<?=$AD_DIR?>/images/up3.jpg">
+					<img src="<?=$AD_DIR?>/images/down.jpg">
+				</p>
+				<div class="clear"></div>
+			</div>
+
+			<div class="panel-body">
+				<h3>lottoooo**</h3>
+				<p>2주 전 4등 이번주 4등 한번 더 당첨 됐네요, 정말 기분 좋네요</p>
+				<p class="t-date">2018-08-08 오후 17:19 | 신고</p>
+			</div>
+			<div class="panel-footer">
+				<p class="p-left">
+					<img src="<?=$AD_DIR?>/images/rere.jpg">
+				</p>
+				<p class="p-right" style="color:red;">
+					<img src="<?=$AD_DIR?>/images/16.jpg">
+					<img src="<?=$AD_DIR?>/images/down.jpg">
+				</p>
+				<div class="clear"></div>
+			</div>
+
+			<div class="panel-body">
+				<h3>rkdjw***</h3>
+				<p>저도 신청 해봅니다.</p>
+				<p class="t-date">2018-08-07 오후 17:19 | 신고</p>
+			</div>
+			<div class="panel-footer">
+				<p class="p-left">
+					<img src="<?=$AD_DIR?>/images/rere.jpg">
+				</p>
+				<p class="p-right" style="color:red;">
+					<img src="<?=$AD_DIR?>/images/2.jpg">
+					<img src="<?=$AD_DIR?>/images/down.jpg">
+				</p>
+				<div class="clear"></div>
+			</div>
+
+
+		<p style="margin-top:15px;padding-bottom:30px;background-color:#f4f4f4;"><img src="<?=$AD_DIR?>/images/footer.gif"></p>
+	</footer>
+
+</div>
+
+<script type="text/javascript">
+	var CODE_NAME  = "<?=$CODE_NAME?>";
+	var MEDIA_CODE = "<?=$MEDIA_CODE?>";
+	var USER_AGENT = "<?=$_SERVER['HTTP_USER_AGENT']?>";
+	var REFERER_CODE_NAME  = "<?=$REFERER_CODE_NAME?>";
+	var REFERER_MEDIA_CODE = "<?=$REFERER_MEDIA_CODE?>";
+	
+	var APPLY_SUBMIT = function () {
+		
+		if ( $("#agree").is(':checked') == false ) {
+			alert("개인정보 수집 및 이용동의하셔야 상담을 신청하실수 있습니다.");
+			return false;           
+		}
+
+		var M_HP     = $("[id=HP_1]").val() + $("[id=HP_2]").val() + $("[id=HP_3]").val();
+		var M_HP2     = $("[id=HP_1]").val() + '-'+ $("[id=HP_2]").val() + '-'+ $("[id=HP_3]").val();
+
+		if ( M_HP == "" ) { alert( "전화번호를 입력해주십시요."); $("[id=HP_1]").focus();return false; }
+
+		$.post('/include/process/INSERT_DATA_LOTTO.php',  { CODE_NAME:CODE_NAME , USER_AGENT:USER_AGENT , MEDIA_CODE:MEDIA_CODE , 
+													  M_HP:M_HP , 
+													  M_HP2:M_HP2,
+													  XFOR:"<?=$_SERVER['HTTP_X_FORWARDED_FOR']?>" , 
+													  REFERER_CODE_NAME:REFERER_CODE_NAME , REFERER_MEDIA_CODE:REFERER_MEDIA_CODE
+		}, function(data){
+
+		alert("신청 되었습니다.");    
+		$("#HP_1").val("");
+		$("#HP_2").val("");
+		$("#HP_3").val("");
+				
+		return true;
+		})
+	}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    ul,ol,li,dt,dd {
+        list-style: none;
+    }
+    body {
+        font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', arial, sans-serif;
+        font-size: 100%;
+        color: #333;
+        line-height: 1.5;
+    }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+    video:focus {
+        outline: none;
+    }
+    .blind {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        margin: -1px;
+        width: 1px;
+        height: 1px;
+    }
+    .clearfix:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .wrap {
+        width: 100%;
+        min-width: 320px;
+        max-width: 800px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding-bottom: 10.875%;
+    }
+    .img_box,
+    .btn_img {
+        font-size: 0;
+    }
+    .btn_img {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+    .img_box .img,
+    .btn_img .img {
+        font-size: 12px;
+        width: 100%;
+    }
+    .box_center {
+        text-align: center;
+    }
+    .txt_emph {
+        color: #d51430;
+        font-weight: bold;
+    }
+    .txt_bold {
+        font-weight: bold;
+    }
+    .img_box_fixed {
+        position: fixed;
+        bottom: 0;
+        font-size: 0;
+    }
+    .img_box_fixed .img {
+        width: 100%;
+        font-size: 12px;
+    }
+    .form_container {
+        padding-bottom: 8.75%;
+        background-image: url(images/bg_form.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: left bottom;
+    }
+    .form_skin {
+        padding-left: 13%;
+    }
+    .form_skin .question {
+        margin-top: 3.736%;
+    } 
+    .form_skin .question_list:first-child .question {
+        margin-top: 0;
+    } 
+    .form_skin .checkbox {
+        display: inline-block;
+    }
+    .form_skin .checkbox .label {
+        display: block;
+        font-size: 0;
+        background-color: #c6c6c6;
+    }
+    .form_skin .checkbox .img_lab {
+        font-size: 12px;
+        pointer-events: none;
+    }
+    .form_skin .checkbox input:checked+.label {
+        background-color: #f58327;
+    }
+    .form_info {
+        width: 485px;
+        margin-top: 38px;
+        padding-left: 22px;
+    }
+    .form_info .inp {
+        box-sizing: border-box;
+        border: 1px solid #727272;
+        background-color: rgba(255,255,255,0.9);
+    }
+    .form_info .inp_container .row {
+        margin-top: 9px;
+    }
+    .form_info .inp_container .cell_label,
+    .form_info .inp_container .cell_inp {
+        float: left;
+    }
+    .form_info .inp_container .cell_label {
+        line-height: 59px;
+        width: 15.670103%;
+        margin-right: 1.8556701%;
+        text-align: right;
+        color: #4a4a4a;
+        font-size: 20px;
+        letter-spacing: -0.075em;
+    }
+    .form_info .inp_container .cell_label02{
+        width: 24.3298969%;
+    }
+    .form_info .inp_container .cell_inp {
+        height: 59px;
+    }
+    .form_info .row01 .cell_inp {
+        width: 82.474226%;
+    }
+    .form_info .row02 .cell_inp_radio {
+        width: 27.4226804%;
+        padding-left: 1.8556701%;
+        margin-right: 1.8556701%;
+        box-sizing: border-box;
+    }
+    .form_info .row02 .inp_radio {
+        vertical-align: middle;
+    }
+    .form_info .row02 .lab_radio {
+        line-height: 28px;
+        color: #84847e;
+    }
+    .form_info .row02 .cell_inp_txt {
+        width: 27.0103092%;
+    }
+    .form_info .inp_txt {
+        width: 100%;
+        height: 100%;
+        font-size: 24px;
+    }
+    .form_info .submit_box {
+        float: right;
+        margin-top: 3.0927835%;
+    }
+    .form_info .submit_box .btn_submit {
+        margin-right: -8px;
+    }
+    .form_info .submit_box .btn_popup {
+        font-size: inherit;
+        background-color: transparent;
+        border: none;
+    }
+    .form_info .inp_agree,
+    .form_info .lab_agree,
+    .form_info .btn_popup {
+        vertical-align: middle;
+    }
+    .goform_container {
+        position: relative;
+    }
+    .goform_container .btn_box {
+        display: block;
+        position: absolute;
+        bottom: 3.25%;
+        right: 5.625%;
+        width: 43.625%;
+    }
+    .video01 {
+        position: relative;
+    }
+    .video01 .video_box {
+        position: absolute;
+        width: 100%;
+        bottom: 0;  
+        margin-bottom: 5%;
+        text-align: center;
+    }
+    .video01 .video_box video {
+        width: 91.75%;
+        background-color: #000;
+    }
+    .video02 {
+        position: relative;
+    }
+    .video02 .video_box {
+        position: absolute;
+        max-width: 670px;
+        width: 83.75%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        margin-bottom: 6.25%;
+        background-color: #000;
+        text-align: center;
+        padding: 1px 0;
+    }
+    .video02 .video_box video {
+        display: block;
+        width: 65.3%;
+        margin: 0 auto;
+    }
+    .go_form_fixed {
+        width: 120px;
+        position: fixed;
+        top: 20%;
+        right: 4%;
+        z-index: 800;
+    }
+    .go_form_fixed .btn_close {
+        position: absolute;
+        top: 5.5%;
+        right: 5.5%;
+        width: 18.75%;
+        border-radius: 50%;
+        box-shadow: 1px 2px 4px rgba(0,0,0,0.15);
+        border: none;
+    }
+    .popup_wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 900;
+        display: none;
+    }
+    .popup_container_agree {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        height: 90%;
+        transform: translate(-50%,-50%);
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .popup_container_agree .popup_content {
+        overflow-y: auto;
+        padding: 8% 5%;
+        height: calc(100% - 50px);
+        box-sizing: border-box;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    .popup_container_agree .title01 {
+        margin-bottom: 10px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .popup_container_agree .txt {
+        margin-top: 10px;
+    }
+    .popup_container_agree .title02 {
+        margin-top: 14px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .popup_container_agree .table {
+        margin-top: 10px;
+    }
+    .popup_container_agree .table table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .popup_container_agree .table th, 
+    .popup_container_agree .table td {
+        padding: 5px 3px;
+        text-align: center;
+        border: 1px solid #999;
+    }
+    .popup_container_agree .popup_btn_box {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    .popup_container_agree .btn_close {
+        display: block;
+        width: 100%;
+        height: 50px;
+        border: none;
+        background-color: #333;
+        color: #fff;
+        font-size: 16px;
+    }
+    
+    @media screen and (min-width: 801px){
+        .go_form_fixed {
+            width: 160px;
+            position: fixed;
+            top: 45%;
+            right: calc(50% - 380px);
+            z-index: 800;
+        }
+        .form_skin .question {
+            margin-top: 26px;
+        } 
+        .popup_container_agree {
+            width: 720px;
+            min-height: 513px;
+        }
+        .wrap {
+            padding-bottom: 87px;
+        }
+    }
+    @media screen and (max-width: 640px) {
+        .form_container {
+            padding-bottom: 5%;
+            background-image: none;
+        }
+        .form_skin {
+            padding-left: 5%;
+        }
+        .form_skin .question_list:first-child .question {
+            margin-top: 0;
+        } 
+        .form_skin .checkbox .label {
+            height: 30px;
+        }
+        .form_skin .checkbox .img_lab {
+            height: 100%;
+        }
+        .form_info {
+            width: 90%;
+            margin: 4% auto 0;
+            padding-left: 0;
+        }
+        .form_info .inp_txt {
+            font-size: 18px;
+        }
+        .form_info .inp_container .cell_label {
+            line-height: 10vw;
+            font-size: 16px;
+            letter-spacing: -0.075em;
+        }
+        .form_info .inp_container .cell_inp {
+            height: 10vw;
+        }
+        .form_info .row02 .lab_radio {
+            line-height: 4.8vw;
+            font-size: 14px;
+        }
+        .form_info .submit_box {
+            float: none;
+            margin-top: 8%;
+            text-align: center;
+        }
+        .form_info .submit_box .btn_submit {
+            margin-right: -8px;
+            width: 80%;
+        }
+        .form_info .submit_box .agree_check {
+            display: inline-block;
+            background-color: rgba(255,255,255,0.6);
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width: 430px) {
+        .form_skin .checkbox .label {
+            height: 6.117vw;
+        }
+        .form_info {
+            width: 94%;
+        }
+        .form_info .inp_container .cell_label {
+            font-size: 14px;
+            width: 16.5257731%;
+            margin-right: 1%;
+            line-height: 13vw;
+        }
+        .form_info .inp_container .cell_label02 {
+            width: 24.3298969%;
+        }
+        .form_info .row02 .cell_inp_radio {
+            width: 29.1340206%;
+            padding-left: 1%;
+            margin-right: 1%;
+            box-sizing: border-box;
+        }
+        .form_info .inp_container .cell_inp {
+            height: 13vw;
+        }
+    }
+
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="go_form_fixed" id="btnGoFormFixed">
+            <a href="#formWrap" class="btn_img btn_goform"><img src="images/btn_fixed.png" class="img" alt="주름, 탄력 지금바로 해결하기 무료상담버튼"></a>
+            <button class="btn_img btn_close" type="button" onclick="closeGoFormBtn();"><img src="images/btn_fixed_close.png" class="img" alt="닫기"></button>
+        </div>
+        <div class="img_box"><img src="images/a_01.jpg" alt="피부노화, 그 한계를 넘다 듀얼소닉으로 되찾는 피부자신감" class="img"></div> 
+        <!-- dbform -->
+        <div class="form_wrap" id="formWrap">
+            <div class="img_box"><img src="images/a_02.jpg" alt="지금 신청하고 놀라운 변화 체험하기" class="img"></div>
+            <form action="" onsubmit="return submitContents(this)">
+                <div class="form_container">
+                    <div class="form_skin">
+                        <dl class="question_list">
+                            <dt class="question"><img src="images/form_question_01.jpg" alt="피부 고민을 모두 체크해주세요" class="img"></dt>
+                            <dd class="checkbox">
+                                <input type="checkbox" name="skintrouble" id="trouble01" class="blind">
+                                <label for="trouble01" class="label"><img src="images/label_trouble_01.png" alt="깊은주름" class="img_lab"></label>
+                            </dd>
+                            <dd class="checkbox">
+                                <input type="checkbox" name="skintrouble" id="trouble02" class="blind">
+                                <label for="trouble02" class="label"><img src="images/label_trouble_02.png" alt="잔주름" class="img_lab"></label>
+                            </dd>
+                            <dd class="checkbox">
+                                <input type="checkbox" name="skintrouble" id="trouble03" class="blind">
+                                <label for="trouble03" class="label"><img src="images/label_trouble_03.png" alt="탄력" class="img_lab"></label>
+                            </dd>
+                            <dd class="checkbox">
+                                <input type="checkbox" name="skintrouble" id="trouble04" class="blind">
+                                <label for="trouble04" class="label"><img src="images/label_trouble_04.png" alt="보습" class="img_lab"></label>
+                            </dd>
+                            <dd class="checkbox">
+                                <input type="checkbox" name="skintrouble" id="trouble05" class="blind">
+                                <label for="trouble05" class="label"><img src="images/label_trouble_05.png" alt="리프팅" class="img_lab"></label>
+                            </dd>
+                        </dl>
+                        <dl class="">
+                            <dt class="question"><img src="images/form_question_02.jpg" alt="피부 타입을 체크해주세요" class="img"></dt>
+                            <dd class="checkbox">
+                                <input type="checkbox" name="skintype" id="skintype01" class="blind">
+                                <label for="skintype01" class="label"><img src="images/label_type_01.png" alt="지성" class="img_lab"></label>
+                            </dd>
+                            <dd class="checkbox">
+                                <input type="checkbox" name="skintype" id="skintype02" class="blind">
+                                <label for="skintype02" class="label"><img src="images/label_type_02.png" alt="중성" class="img_lab"></label>
+                            </dd>
+                            <dd class="checkbox">
+                                <input type="checkbox" name="skintype" id="skintype03" class="blind">
+                                <label for="skintype03" class="label"><img src="images/label_type_03.png" alt="건성" class="img_lab"></label>
+                            </dd>
+                            <dd class="checkbox">
+                                <input type="checkbox" name="skintype" id="skintype04" class="blind">
+                                <label for="skintype04" class="label"><img src="images/label_type_04.png" alt="복합성" class="img_lab"></label>
+                            </dd>
+                            <dd class="checkbox">
+                                <input type="checkbox" name="skintype" id="skintype05" class="blind">
+                                <label for="skintype05" class="label"><img src="images/label_type_05.png" alt="민감성" class="img_lab"></label>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="form_info clearfix">
+                        <div class="inp_container">
+                            <div class="row row01 clearfix">
+                                <div class="cell_label"><label for="mlh_name" class="label">이 름</label></div>
+                                <div class="cell_inp"><input type="text" name="mlh_name" id="mlh_name" class="inp inp_txt input" label="이름"></div>
+                            </div>
+                            <div class="row row02 clearfix">
+                                <div class="cell_label">성 별</div>
+                                <div class="cell_inp cell_inp_radio">
+                                    <input type="radio" name="mlh_gender" id="mlh_gender1" class="inp_radio input" label="성별">
+                                    <label for="" class="lab_radio">남성</label>
+                                    <br>
+                                    <input type="radio" name="mlh_gender" id="mlh_gender2" class="inp_radio input" label="성별" checked>
+                                    <label for="mlh_gender2" class="lab_radio">여성</label>
+                                </div>
+                                <div class="cell_label cell_label02"><label for="mlh_age" class="label">나 이</label></div>
+                                <div class="cell_inp cell_inp_txt">
+                                    <input type="tel" name="mlh_age" id="mlh_age" class="inp inp_txt input" label="나이">
+                                </div>
+                            </div>
+                            <div class="row row01 clearfix">
+                                <div class="cell_label"><label for="mlh_mobileno" class="label">연 락 처</label></div>
+                                <div class="cell_inp"><input type="tel" name="mlh_mobileno" id="mlh_mobileno" class="inp inp_txt input" label="연락처"></div>
+                            </div>
+                            <div class="row row02 clearfix">
+                                <div class="cell_label">렌탈상품</div>
+                                <div class="cell_inp cell_inp_radio">
+                                    <input type="radio" name="mlh_goods_type" id="mlh_goods_type" class="inp_radio input" label="렌탈상품" checked>
+                                    <label for="mlh_goods_type" class="lab_radio">럭셔리</label>
+                                    <br>
+                                    <input type="radio" name="mlh_goods_type" id="mlh_goods_type_" class="inp_radio input" label="렌탈상품">
+                                    <label for="mlh_goods_type_" class="lab_radio">프로페셔널</label>
+                                </div>
+                                <div class="cell_label cell_label02"><label for="mlh_time" class="label">상담가능시간</label></div>
+                                <div class="cell_inp cell_inp_txt">
+                                    <input type="text" name="mlh_time" id="mlh_time" class="inp inp_txt input" label="상담가능시간">
+                                </div>
+                            </div>
+                            
+                        </div> 
+                        <div class="submit_box">
+                            <button type="submit" class="btn_img btn_submit" ><img src="images/btn_form.png" class="img" alt="무료상담신청 go"></button>
+                            <div class="agree_check agree_box">
+                                <input type="checkbox" name="agree" id="agree" class="inp_agree"> 
+                                <label for="agree" class="lab_agree">개인정보 수집 및 활용동의</label>
+                                | <button class="btn_popup" type="button" onclick="openPopup('popupAgree')">약관보기</button>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- dbform end -->
+ 
+        <!-- video01 -->
+        <div class="video01">
+            <div class="img_box"><img src="images/a_03.jpg" alt="인기뷰티프로그램 뷰티앤부티가 인정한 연예인 피부관리비법" class="img"></div>
+            <div class="video_box">
+                <video controls>
+                    <source src="video/video02.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <!-- video01 end -->
+
+        <div class="img_box"><img src="images/a_04.jpg" alt="듀얼소닉 효과" class="img"></div>
+        <div class="img_box"><img src="images/a_05.jpg" alt="특허받은 듀얼레이어 기술이 만든 놀라운 효과" class="img"></div>
+        <div class="img_box"><img src="images/a_06.jpg" alt="듀얼소닉만이 가능한 검증된 멀티케어" class="img"></div>
+        <div class="img_box"><img src="images/a_07.jpg" alt="듀얼소닉을 직접 경험한 고객님의 생생리뷰" class="img"></div>
+
+        <!-- video02 -->
+        <div class="video02">
+            <div class="img_box"><img src="images/a_08.jpg" alt="초음파가 진피층과 SMAS층에 직접 침투하기 때문에 단순히 LED 빛을 쐬는 것과는 차원이 다른 효과를 경험하실 수 있습니다." class="img"></div>
+            <div class="video_box">
+                <video controls>
+                    <source src="video/video01.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <!-- video02 end -->
+
+        <div class="img_box"><img src="images/a_09.jpg" alt="듀얼소닉 기기 설명" class="img"></div>
+
+        <!-- goform -->
+        <div class="goform_container">
+            <div class="img_box"><img src="images/a_10.jpg" alt="듀얼소닉 렌탈비용 럭셔리는 월 45900원 프로페셔널은 월 58900원 제휴카드 적용시 23000월까지 할인" class="img"></div>
+            <div class="btn_box">
+                <a href="#formWrap" class="btn_img"><img src="images/btn_goform.png" class="img" alt="무료상담신청 go"></a>
+            </div>
+        </div>
+        <!-- goform end -->
+        <div class="img_box"><img src="images/a_11.jpg" alt="듀얼소닉 따라올 수 없는 기술력" class="img"></div>
+        <div class="img_box"><img src="images/a_12.jpg" alt="푸터" class="img"></div>
+        <div class="img_box_fixed"><img src="images/bottom.jpg" alt="렌탈혜택1 럭셔리 1500샷 추가 사은품 4종증정 렌탈혜택2 프로페셔널 3000샷 추가 사은품 5종 증정" class="img"></div>
+
+        <div class="popup_wrap" id="popupWrap">
+            <div class="popup_container_agree" id="popupAgree">
+                <div class="popup_content">
+                    <div class="title01">개인정보 취급방침</div>
+
+<div class="txt">
+    지온메디텍 (이하 “회사”)은 고객의 개인정보를 중요시 하며, 『정보통신망이용 촉진 및 정보 보호 등에 관한 법률 』 상의 개인정보보호 규정 및 정보통신부가 제정한 『 개인정보보호 및 취급방침』을 준수하고 있습니다. 회사는 개인정보취급방침을 통해 아래와 같이 제공해주시는 개인정보의 수집 및 이용목적과 개인정보보호를 위한 회사의 조치 사항을 고지합니다.
+</div>
+
+<div class="title02">1. 개인정보 수집 이용 제공 등에 대한 동의</div>
+<div class="txt">
+    회사는 고객이 회사가 제공하는 안내 및 상담신청에 귀하가 제공한 정보는 개인정보취급방침에 명시된 내용 이외의 목적으로는 사용되지 아니합니다.
+</div>
+
+<div class="title02">2. 수집하는 개인정보의 범위 및 수집방법</div>
+<div class="txt">
+    회사에서는 귀하의 상담신청 및 서비스신청 등을 위한 필수적인 정보를 입력 받고 있습니다. 
+    <br>- 필수정보 : 성명, 나이, 성별, 전화번호
+    <br>- 서비스 이용과정이나 처리 과정에서 자동으로 생성되어 수집될 수 있는 정보 : IP Address, 참여일시, 유입경로(참여매체), 쿠키, 방문 일시, 서비스 이용 기록, 이용 정지 기록 등
+    <br>- 청구서, 상품 배송지 확인을 위한 수집정보 : 성명, 전화번호, 우편물 수령지(자택 및 직장주소)
+    <br>(본인 이외의 타인에게 직접 배송을 요청할 경우 이름, 주소, 연락처 등 배송에 필요한 개인 식별 정보를 수집하는 것에 대하여 동의합니다.)
+</div>
+
+<div class="title02">3. 개인정보의 수집 및 이용목적</div>
+<div class="txt">
+    입력하신 정보는 개인별 맞춤 서비스 제공, 이벤트 안내(전화, MMS 등), 상품안내를 위한 자료(전화, MMS 등)로 활용 됩니다.
+</div>
+
+<div class="title02">4. 개인정보의 보유 및 이용기간</div>
+<div class="txt">
+    개인정보를 수집 동의일로부터 5년간 보유 및 활용하게 되고, 위 보유기간의 경과 즉시 기록을 재생할 수 없는 기술적 방법을 사용하여 동 개인정보를 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명시한 기간 동안 보존합니다. 
+    <br>&lt; 관련법령에 의한 정보보유 사유 &gt; 
+    <br>- 계약 또는 청약철회 등에 관한 기록 : 5년 
+    <br>- 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년
+</div>
+
+<div class="title02">5. 개인정보의 파기절차 및 방법</div>
+<div class="txt">
+    원칙적으로, 개인정보 수집 및 이용목적이 달성되거나, 개인정보 보유 및 이용기간이 종료한 경우 해당 정보를 지체 없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.
+    <br>&lt; 파기절차 &gt; 
+    <br>귀하가 참여한 고객정보는 목적이 달성된 후 내부 방침 및 기타 관련 법령에 의한 정보보호 사유에 따라(보유 및 이용기간 참조) 일정기간 저장된 후 파기됩니다. 동 개인정보는 법률에 의한 경우가 아니고서는 보유 이외의 다른 목적으로 이용되지 않습니다.
+    <br>&lt; 파기방법 &gt; 
+    <br>- 종이에 출력된 개인정보는 분쇄기로 분쇄하거나 소각을 통하여 파기하고 
+    <br>- 전자적 파일형태로 저장된 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다. 
+</div>
+
+<div class="title02">6. 개인정보 수집 이용 제공 등에 대한 동의철회</div>
+<div class="txt">
+    귀하는 개인정보의 수집 이용 제공에 대한 동의를 본인 및 법정대리인을 통해 철회할 수 있습니다. 동의철회는 명시된 문의전화 또는 이메일 등을 통해 가능합니다.
+</div>
+
+<div class="title02">7. 개인정보의 제 3자 제공 및 취급위탁</div>
+<div class="txt">
+    회사는 귀하의 개인정보를 &lt;개인정보의 수집목적 및 이용목적&gt;에서 고지한 범위 내에서 사용하며, 동 범위를 초과하여 이용하거나 타인 또는 타기업, 기관에 제공하지 않습니다. 그러나 보다 나은 서비스 제공을 위하여 필요할 경우, 귀하의 개인정보를 제휴사에게 제공하거나 또는 제휴사와 공유할 수 있습니다. 개인정보를 제공하거나 공유할 경우에는 사전에 귀하의 동의를 구하는 절차를 거치게 됩니다.
+    <br>다음은 예외로 합니다. 
+    <br>관계법령에 의하여 수사상의 목적으로 관계기관으로부터의 요구가 있을 경우입니다. 제휴관계에 변화가 있거나 제휴관계가 종결될 때도 같은 절차에 의하여 고지하거나 동의를 구합니다. 
+    <br>통계작성/학술연구나 시장조사를 위하여 특정 개인을 식별할 수 없는 형태로 광고주/협력 사나 연구단체 등에 제공하는 경우 
+    <br>위탁 처리 : 원활한 업무 처리를 위해 이용자의 개인정보를 위탁 처리할 경우 반드시 사전에 위탁처리 업체명과 위탁 처리되는 개인정보의 범위, 업무위탁 목적, 위탁 처리되는 과정, 위탁관계 유지기간 등에 대해 상세하게 고지합니다. 
+    <br>그러나 예외 사항에서도 관계법령에 의하거나 수사기관의 요청에 의해 정보를 제공한 경우에는 이를 당사자에게 고지하는 것을 원칙으로 운영하고 있습니다. 법률상의 근거에 의해 부득이하게 고지를 하지 못할 수도 있습니다. 본래의 수집목적 및 이용목적에 반하여 무분별하게 정보가 제공되지 않도록 최대한 노력하겠습니다.
+</div>
+
+<div class="title02">8. 개인정보 처리 업무의 위탁</div>
+<div class="txt">
+    가. 회사는 기본적인 서비스 제공, 더 나은 서비스 제공, 고객편의 제공 등 원활한 업무 수행을 위하여 다음과 같이 개인정보 처리 업무를 외부전문업체에 위탁하여 운영하고 있습니다.
+</div>
+<div class="table">
+    <table>
+        <thead>
+            <tr>
+                <th>수탁자</th>
+                <th>위탁사무 및 목적</th>
+                <th>보유 및 이용기간</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>㈜하이애드원</td>
+                <td>회원 정보 DB시스템 유지보수 </td>
+                <td>고객동의 철회 또는 계약 만료 때 까지</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="txt">
+    나. 회사는 위탁업무계약서 등을 통하여 개인정보보호 관련 법규의 준수, 개인정보에 관한 비밀유지, 개인정보의 제3자 제공 금지, 사고시의 책임 부담, 위탁기간, 처리 종료 후의 개인정보의 반환 또는 파기의무 등을 규정하고, 이를 지키도록 관리하고 있습니다.
+</div>
+
+<div class="title02">9. 개인정보관리책임자 및 민원서비스</div>
+<div class="txt">
+    귀하의 개인정보를 보호하고 관련한 불만을 처리하기 위하여 회사는 개인정보관리책임자를 두어 귀하의 개인정보를 관리하고 있습니다.
+</div>
+ 
+<div class="txt">
+    [개인정보관리책임자] 
+    <br>성 명 : 유가을
+    <br>직 위 : 과장
+    <br>연락처 : 
+    <br>팩스번호 : 
+    <br>이메일 : 
+</div>
+
+<div class="txt">
+    [개인정보 관리자] 
+    <br>성  명 : 유가을
+    <br>직  위 : 과장
+    <br>연락처 : 
+    <br>팩스번호:
+    <br>이메일 :
+</div>
+ <div class="txt">
+    - 정보주체 께서는 회사의 서비스(또는 사업)을 이용하시면서 발생한 모든 개인정보 보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 관리책임자 및 담당부서로 문의하실 수 있습니다. 회사는 정보주체의 문의에 대해 지체없이 답변 및 처리해드릴 것입니다. 
+    <br>- 정보주체는 개인정보 보호법 제35조 및 정보통신망법 제30조에 따른 개인정보의 열람 청구를 관련 부서에 할 수 있습니다. 회사는 정보주체의 개인정보 열람청구가 신속하게 처리되도록 노력하겠습니다.
+ </div>
+
+<div class="title02">10. 개인정보 열람청구</div>
+<div class="txt">
+    정보주체는 개인정보 보호법 제35조 및 정보통신망법 제30조에 따른 개인정보의 열람 청구를 아래의 부서에 할 수 있습니다. 회사는 정보주체의 개인정보 열람청구가 신속하게 처리되도록 노력하겠습니다.
+</div>
+
+<div class="txt">
+    가. 개인정보 열람청구 접수ㆍ처리 부서
+    <br>성  명 : 유가을
+    <br>직  위 : 과장
+    <br>연락처 : 
+    <br>팩스번호:
+    <br>이메일 :
+</div>
+<div class="title02">11. 만 14 세 미만 아동의 개인정보보호</div>
+회사는 법정 대리인의 동의가 필요한 만 14세 미만 아동의 정보는 수집하고 있지 않습니다.
+
+<div class="title02">12. 권익침해 구제방법</div>
+<div class="txt">
+    정보주체는 아래의 기관에 대해 개인정보 침해에 대한 피해구제, 상담 등을 문의하실 수 있습니다. [아래의 기관은 회사와는 별개의 기관으로서, 회사의 자체적인 개인정보 불만처리, 피해구제 결과에 만족하지 못하시거나 보다 자세한 도움이 필요하시면 문의하여 주시기 바랍니다]
+</div>
+
+<div class="txt">
+    가. 개인정보보호 종합지원 포털 (행정안전부 운영)
+    <br>소관업무 : 개인정보 침해사실 신고, 상담 신청, 자료제공
+    <br>홈페이지 : www.privacy.go.kr
+    <br>전화 : 02-2100-3394
+</div>
+
+<div class="txt">
+    나. 개인정보 침해신고센터 (한국인터넷진흥원 운영)
+    <br>소관업무 : 개인정보 침해사실 신고, 상담 신청
+    <br>홈페이지 : privacy.kisa.or.kr
+    <br>전화 : (국번없이) 118 - 주소 : (138-950) 서울시 송파구 중대로135 한국인터넷진흥원 개인정보침해신고센터
+</div>
+
+<div class="txt">
+    다. 개인정보 분쟁조정위원회 (한국인터넷진흥원 운영)
+    <br>소관업무 : 개인정보 분쟁조정신청, 집단분쟁조정 (민사적 해결)
+    <br>홈페이지 : privacy.kisa.or.kr
+    <br>전화 : (국번없이) 118 - 주소 : (138-950) 서울시 송파구 중대로135 한국인터넷진흥원 개인정보침해신고센터
+</div>
+
+<div class="txt">
+    라. 경찰청 사이버테러대응센터
+    <br>소관업무 : 개인정보 침해 관련 형사사건 문의 및 신고
+    <br>홈페이지 : www.netan.go.kr
+    <br>전화 : (사이버범죄) 02-393-9112 (경찰청 대표) 1566-0112
+</div>
+
+<div class="title02">13. 정책 변경에 따른 공지의무</div>
+<div class="txt">
+    이 개인정보처리방침은 2019 년 12월 03 일 에 제정되었으며 법령/정책 또는 보안기술의 변경에 따라 내용의 추가 및 삭제 및 수정이 있을 시에는 변경되는 개인정보처리방침을 시행하기 최소 15일전에 해당 품목별 인터넷페이지를 통해 내용 등을 공지하도록 하겠습니다.
+</div>
+
+<div class="txt">
+    - 개인정보처리방침 시행일자 : 2019-12-03
+</div>
+                </div>
+                <div class="popup_btn_box">
+                    <button type="button" class="btn_close" onclick="closePopup('popupAgree')">닫 기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openPopup(el){
+            $('#popupWrap').show();
+            $('#'+ el).show();
+        }
+        function closePopup(el){
+            $('#popupWrap').hide();
+            $('#'+ el).hide();
+        }
+        function closeGoFormBtn() {
+            $('#btnGoFormFixed').hide();
+        }
+
+        // 한글 조사변경
+        function getPostWord(str, firstVal, secondVal) {
+            try {
+                var lastStr = str[str.length - 1].charCodeAt(0);
+                if (lastStr < 0xAC00 || lastStr > 0xD7A3) {
+                    return str;
+                }
+                var lastCharIndex = (lastStr - 0xAC00) % 28;
+                if (lastCharIndex > 0) {
+                    if (firstVal === "으로" && lastCharIndex === 8)
+                        str += secondVal;
+                    else
+                        str += firstVal;
+                } else {
+                    str += secondVal;
+                }
+            } catch (e) {
+                console.error(e);
+            }
+
+            return str;
+        }
+        // firstVal :: 으로 / 을 / 이 / 은 / 과
+        // secondVal :: 로 / 를 / 가 / 는 / 와 
+
+        function submitContents(f) {
+            var flag=false;
+            var href;
+
+
+            $('.input').each(function(){
+                if( ! jQuery.trim($(this).val()) ) {
+                    alert(getPostWord($(this).attr('label'),'을','를') + '입력해 주세요');
+                    $(this).focus();
+                    flag=false;
+                    return false;
+                } else flag=true;
+            });
+
+            if(!flag) return false;
+
+            if($('input[id="agree"]').is(":checked")){
+                // href = cb_url + '/postact/media_click/' + $('#post_id').val() ;
+
+                // $.ajax({
+                //     async : false,
+                //     url : href,
+                //     type : 'get',
+                //     dataType : 'json',
+                //     complete : function(data) {
+                //         // $("#mlh_mobileno").val($("#mlh_mobileno1").val()+$("#mlh_mobileno2").val()+$("#mlh_mobileno3").val());
+                        
+                //     }
+                // });
+
+                return flag;
+            } else alert('개인정보 수집 및 이용동의를 체크 해주시기 바랍니다.');
+            
+            return false;
+        }
+    </script>
+</body>
+</html> 

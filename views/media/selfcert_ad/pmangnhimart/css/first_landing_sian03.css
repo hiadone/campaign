@@ -1,0 +1,72 @@
+.wrap {
+    padding-bottom: 50px;
+}
+.btn_applink {
+    position: fixed;
+    bottom: 0;
+    left: auto;
+    width: 100%;
+    max-width: 750px;
+}
+.btn_applink .btn_main {
+    color: #fff;
+    background-color: #ed4046;
+    border-radius: 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.15);
+}
+.btn_applink .btn_main .icon_font {
+    vertical-align: top;
+}
+.event_rule_container {
+    padding: 12% 3% 8%;
+    background-color: #ececec;
+}
+.event_rule_container .title {
+    text-align: center;
+    font-size: 32px;
+    font-family: 'Do Hyeon',sans-serif;
+}
+.event_rule_container .event_rules_list {
+    margin-top: 6%;
+}
+.event_rule_container .event_rule_item {
+    padding: 10px 0;
+}
+.event_rule_container .event_rule_item:not(:last-child) {
+    border-bottom: 2px dashed #c3c3c3;
+}
+.event_rule_container .event_rule_item .step {
+    float: left;
+    width: 58px;
+    height: 58px;
+    padding: 11px 0 0;
+    box-sizing: border-box;
+    border-radius: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: #3d62bb;
+    font-size: 13px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+.event_rule_container .event_rule_item .num {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+}
+.event_rule_container .event_rule_item .txt_box {
+    float: left;
+    width: calc(100% - 58px);
+    padding: 8px 0 8px 10px;
+    box-sizing: border-box;
+    word-break: keep-all;
+}
+.event_rule_container .event_rule_item .event_rule {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.event_rule_container .event_rule_item .event_rule_sub {
+    font-size: 14px;
+    line-height: 1.4;
+}

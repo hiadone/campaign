@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+
+/*시크릿 투어,비자,렌트 카 클릭시 댓글 검색 영역*/
+    .board_wrap{
+        margin-bottom: 0;
+    }
+    .board_wrap .form-group{
+        width: 100%;
+        margin:3% 0; 
+    }
+    .board_wrap .form-group input{
+        height: 27px;
+        padding:5px;
+        box-sizing: border-box;
+        border-radius: 0;
+        border:1px solid #ededed;
+        margin-right: 8px;
+    }
+    .board_wrap .form-group button{
+        width: 27px;
+        height: 27px;
+        background: #ff6c2d;
+        color: #fff;
+        border:0;
+        outline: none;
+        border-radius: 3px;
+        padding:0;
+        float: right;
+    }
+    .board_wrap .form-group button:focus,
+    .board_wrap .form-group button:hover {
+        background: #ff6c2d;
+    }
+
+/*시크릿 투어,비자,렌트 카 클릭시 댓글리스트 영역*/
+    .board_wrap ul li{
+        border:1px solid #ededed;
+        padding:3% 3% 2%;
+        box-sizing: border-box;
+        display: inline-block;
+        width: 100%;
+        position: relative;
+        margin-bottom: 2%;
+    }
+    .board_wrap h3{
+        float: left;
+        width:72%;
+        margin-right: 3%;
+        margin-top: 0;
+        margin-bottom: 3%;
+        font-size:14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        word-wrap:break-word;
+        line-height: 1.4;
+        font-family: 'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',arial,sans-serif;
+    }
+    .board_wrap ul .board_nothing {
+        text-align: center
+    }
+    .board_wrap .board_nothing h3{
+        margin: 20px 0;
+        width: 100%;
+    }
+    .board_wrap .fa-lock {
+        color: #999;
+    }
+    .board_wrap .question{
+         display: none;
+         font-family: 'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',arial,sans-serif;
+    }
+    .board_wrap li .clear p{
+        float: right;
+        height: 20px;
+        padding-top: 4px;
+        margin-bottom: 0;
+        font-size: 12px;
+        color: #747474;
+        font-family: 'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',arial,sans-serif;
+    }
+    .board_wrap li span{
+        position: absolute;
+        top: 13px;
+        right: 4%;
+        font-size: 12px;color: #666;
+        font-weight: bold;
+        font-family: 'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',arial,sans-serif;
+    }
+    .board_wrap form li span.color{
+        color: #ff6c2d;
+    }
+    .board_wrap form li .clear{
+        width: 100%;
+        display: inline-block;
+        position: relative;
+        bottom:-5px;
+    }
+    .board_wrap .question div.question-content{
+        width: 100%;
+        /*margin: 3% 0 5%;*/
+        clear: both;
+        line-height: 1.6;
+        font-size: 14px;
+    }
+    .board_wrap .question ul{
+        width: 97.5%;
+        margin: 3% 0 0 2.5%;
+    }
+    .board_wrap .question ul li{
+        border:0;
+        font-size: 14px;
+        /*background:url(https://secretvt.com/assets/images/temp/write_img/reply_arrow.png) no-repeat top left;*/
+        background-size: 6%;
+        padding: 2px 0 0;
+        line-height: 1.6;
+        margin-bottom: 3%;
+        display: inline-block;
+        width: 100%;
+    }
+    .board_wrap .question ul li p{
+        margin-bottom: 10px;
+    }
+    .board_wrap .question ul li div.question-content{
+        margin-bottom:1.5%;
+        margin-top: 0;
+    }
+    .board_wrap .button{
+        width: 45%;
+        float: right;
+    }
+    .board_wrap .button button{
+        width: 30%;
+        text-align:center;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 3px;
+        font-size: 11px; 
+        padding: 2px 0 1.5px;
+        float: left;
+        font-weight: bold;
+        outline: none;
+        margin-right: 3%;
+    }
+    .board_wrap .button button.btn-success {
+        background: #ff6c2d;
+        border-color: #ff6c2d;
+        box-shadow: none;
+        text-shadow: none;
+    }
+    .board_wrap .button button.btn-info {
+        color: #333;
+        background-image: none;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        box-shadow: none;
+        text-shadow: none;
+    }
+    .board_wrap .button button:last-child{
+        margin-right: 0%;
+    }
+    .board_wrap .question .button{
+        width:33%;
+    }
+    .board_wrap .question .button button{
+        width:48.5%;
+    }

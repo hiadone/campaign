@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            font-family: 'Apple SD Gothic Neo','Malgun Gothic',arial,sans-serif;
+        }
+        .blind {
+            position: absolute;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            margin: -1px;
+            width: 1px;
+            height: 1px;
+        }
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .wrap {
+            width: 100%;
+            min-width: 320px;
+            max-width: 730px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .img_box,
+        .btn_img {
+            font-size: 0;
+        }
+        .btn_img {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+        }
+        .img_box .img,
+        .btn_img .img {
+            font-size: 12px;
+            width: 100%;
+        }
+        .box_center {
+            text-align: center;
+        }
+        .form_container {
+            padding-top: 3.4246%;
+            background-color: #afafaf;
+            background-image: url('images/777.jpg');
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        .inp_list .row { 
+            margin-bottom: 1.4%;
+        }
+        .inp_list .label_box {
+            width: 30.1369%;
+            height: 4.7945vw;
+            max-height: 35px;
+            float: left;
+        }
+        .inp_list .label_blind {
+            display: block;
+            width: 63%;
+            height: 100%;
+            margin-left: 37%;
+        }
+        .inp_list .inp_box {
+            float: right;
+            width: 69.8631%;
+            font-size: 0;
+        }
+        .inp_list .inp {
+            height: 4.7945vw;
+            max-height: 35px;
+            border: none;
+            background-color: #fff;
+            font-size: 36px;
+        }
+        .inp_list .inp_normal {
+            width: 66.6666%;
+        }
+        .inp_list .inp_tel {
+            width: 20%;
+            margin-right: 1.9607%;
+        }
+        .inp_list .inp_textarea {
+            width: 66.6666%;
+            height: 7.3972vw;
+            max-height: 54px;
+        }
+        .check_box {
+            margin: 10px 0;
+        }
+        .check_box .inp_check {
+            width: 18px;
+            height: 18px;
+            vertical-align: middle;
+        }
+        .check_box .label_check {
+            font-size: 16px;
+            letter-spacing: -1px;
+        }
+        .txt_emph {
+            color: #a40400;
+        }
+        @media screen and (max-width: 730px){
+            .inp_list .inp {
+                font-size: 4.9315vw;
+            }
+        }
+        
+        @media screen and (max-width: 540px){
+            .form_container {
+                padding-top: 4%;
+                background-size: 122%;
+            }   
+            .inp_list .row { 
+                margin-bottom: 2%;
+            }
+            .inp_list .label_box {
+                width: 26%;
+                height: 5.8vw;
+            }
+            .inp_list .inp_box {
+                float: right;
+                width: 74%;
+                font-size: 0;
+            }
+            .inp_list .inp {
+                height: 5.8vw;
+                max-height: 35px;
+                border: none;
+                background-color: #fff;
+            }
+            .inp_list .inp_normal {
+                width: 78%;
+            }
+            .inp_list .inp_tel {
+                width: 24%;
+                margin-right: 2.4%;
+            }
+            .inp_list .inp_textarea {
+                width: 78%;
+                height: 9.5vw;
+                max-height: 54px;
+            }
+            .check_box .label_check {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="img_box"><img src="images/1a.jpg" alt="시원하게 콸콸콸 남자의 건강한 전립선을 위해" class="img"></div>
+        <div class="img_box"><img src="images/2b.jpg" alt="쏘팔메토 야뇨 소변속도 느림개선 전립선건강 불편함 개선 확인 완료" class="img"></div>
+        <div class="img_box"><a href="#formContainer"><img src="images/nbtn1.jpg" alt="무료체험 신청하기" class="img"></a></div>
+        <div class="img_box"><img src="images/3c.jpg" alt="쏘팔메토 강남팔팔 V맥스 효과" class="img"></div>
+        <div class="img_box"><img src="images/4d.jpg" alt="쏘팔메토 강남팔팔 V맥스 효과" class="img"></div>
+        <div class="img_box"><img src="images/5e.jpg" alt="쏘팔메토 강남팔팔 V맥스 원료" class="img"></div>
+        <div class="img_box"><img src="images/6f.jpg" alt="쏘팔메토 이벤트 첫번째 30일분 무료증정 두번째 불만족시 100% 환불보장" class="img"></div>
+        <div class="form_container" id="formContainer">
+            <form action="" onsubmit="return submitContents(this)">
+                <div class="form_box">
+                    <dl class="inp_list">
+                        <div class="row clearfix">
+                            <dt class="label_box">
+                                <label for="mlh_name" class="label_blind"><span class="blind">이름</span></label>
+                            </dt>
+                            <dd class="inp_box">
+                                <input type="text" name="mlh_name" id="mlh_name" class="input inp inp_normal" label="이름">
+                            </dd>
+                        </div>
+                        <div class="row clearfix">
+                            <dt class="label_box">
+                                <label for="mlh_age" class="label_blind"><span class="blind">나이</span></label>
+                            </dt>
+                            <dd class="inp_box">
+                                <input type="tel" name="mlh_age" id="mlh_age" class="input inp inp_normal" maxlength="2" label="나이">
+                            </dd>
+                        </div>
+                        <div class="row clearfix">
+                            <dt class="label_box">
+                                <label for="mlh_mobileno1" class="label_blind"><span class="blind">연락처</span></label>
+                            </dt>
+                            <dd class="inp_box">
+                                <input type="tel" name="mlh_mobileno1" id="mlh_mobileno1" class="input inp inp_tel" maxlength="3" label="연락처">
+                                <input type="tel" name="mlh_mobileno1" id="mlh_mobileno2" class="input inp inp_tel" maxlength="4" label="연락처">
+                                <input type="tel" name="mlh_mobileno1" id="mlh_mobileno3" class="input inp inp_tel" maxlength="4" label="연락처">
+                            </dd>
+                        </div>
+                        <div class="row clearfix">
+                            <dt class="label_box">
+                                <label for="mlh_text" class="label_blind"><span class="blind">문의</span></label>
+                            </dt>
+                            <dd class="inp_box">
+                                <textarea name="mlh_text" id="mlh_text" class="input inp inp_textarea" label="문의"></textarea>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+                <!-- <div class="box_center check_box">
+                    <input type="checkbox" name="" id="agree" class="inp_check">
+                    <label for="agree" class="label_check">개인정보 수집/이용 동의</label>
+                </div> -->
+                <!-- <div class="box_center txt_emph">30세 이상만 신청 가능합니다</div> -->
+                <div class="img_box">
+                    <button class="btn_img" type="submit"><img src="images/nbtn22.jpg" alt="30일 무료체험 신청하기" class="img"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        // 한글 조사변경
+        function getPostWord(str,firstVal,secondVal) {
+            try {
+                var lastStr = str[str.length-1].charCodeAt(0);
+                if(lastStr < 0xAC00 || lastStr > 0xD7A3) {
+                    return str;
+                }
+                var lastCharIndex = (lastStr - 0xAC00) % 28;
+                if(lastCharIndex > 0) {
+                    if(firstVal === "으로" && lastCharIndex === 8)
+                        str += secondVal;
+                    else
+                        str += firstVal;
+                } else {
+                    str += secondVal;
+                }
+            } catch(e) {
+                console.error(e);
+            }
+
+            return str;
+        }
+        // firstVal :: 으로 / 을 / 이 / 은 / 과
+        // secondVal :: 로 / 를 / 가 / 는 / 와 
+    
+        function submitContents(f) {
+            var flag=false;
+            var href;
+
+
+            $('.input').each(function(){
+                if( ! jQuery.trim($(this).val()) ) {
+                    alert(getPostWord($(this).attr('label'),'을','를') + '입력해 주세요');
+                    $(this).focus();
+                    flag=false;
+                    return false;
+                } else flag=true;
+            });
+
+            if(!flag) return false;
+
+            // if($('input[id="agree"]').is(":checked")){
+            //     // href = cb_url + '/postact/media_click/' + $('#post_id').val() ;
+
+            //     // $.ajax({
+            //     //     async : false,
+            //     //     url : href,
+            //     //     type : 'get',
+            //     //     dataType : 'json',
+            //     //     complete : function(data) {
+            //     //         // $("#mlh_mobileno").val($("#mlh_mobileno1").val()+$("#mlh_mobileno2").val()+$("#mlh_mobileno3").val());
+                        
+            //     //     }
+            //     // });
+
+            //     return flag;
+            // } else alert('개인정보 수집 및 이용동의를 체크 해주시기 바랍니다.');
+            
+            return false;
+        }
+    </script>
+</body>
+</html>

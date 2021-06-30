@@ -1,0 +1,374 @@
+@charset "utf-8";
+
+body,html,div,p,figure,figcaption,form,input,span,b,ul,li {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-size: 12px;
+    line-height: 1;
+    font-family: '맑은 고딕','Malgun Gothic','굴림',sans-serif;
+    color: #000;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul,li {
+    list-style: none;
+}
+
+.wrap {
+    width: 100%;
+    max-width: 425px;
+    margin: 0 auto;
+}
+.cont_box {
+    padding: 10px;
+}
+.txt_box {
+    font-size: 16px;
+    line-height: 26px;
+}
+.cont_box02 .img_box {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.img_box,
+.img_box02,
+.figure,
+.txt_box p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.img_box,
+.img_box02,
+.img_title, 
+.figure {
+    width: 100%;
+    font-size: 0;
+}
+.img_box img,
+.img_title img,
+.figure img {
+    width: 100%;
+    font-size: 12px;
+}
+.img_box,
+.img_box02 {
+    text-align: center;
+}
+.figcaption {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+.fz13 {
+    font-size: 13px;
+}
+.img_box02 img,
+.img_box .w95per {
+    width: 95%;
+}
+.top {
+    text-align: right;
+}
+.top .caption {
+    padding-right: 10px;
+    line-height: 20px;
+    font-size: 11px;
+    color: #666;
+}
+.top .img_box {
+    margin-top: 0;
+}
+.comment_wrap .left {
+    float: left;
+}
+.comment_wrap .right {
+    float: right;
+}
+.comment_top {
+    margin-bottom: 16px;
+    padding: 0 10px;
+}
+.comment_top:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.comment_top .comment_num {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+}
+.comment_top .comment_num b {
+    color: #f00;
+}
+.comment_top .btn_write img {
+    width: 70px;
+}
+.comment_list {
+    border-top: 1px solid #a9a9a9;
+}
+.comment_list .tabs:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.comment_list .tab{
+    width: 50%;
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+    height: 38px;
+    line-height: 38px;
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+}
+.comment_list .tab:not(:last-child){
+    border-right: 1px solid #ddd;
+}
+.comment_list .tab.active{
+    color: #c00;
+    border-bottom-color: #fff;
+    background-color: #fff;
+}
+.comment_box {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.comment_box .user_id {
+    color: #c00;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+}
+.comment_box .comment {
+    font-size: 14px;
+    line-height: 1.4;
+}
+.comment_box .date {
+    font-size: 11px;
+    color: #777;
+    padding-top: 7px;
+    letter-spacing: -1px;
+}
+.comment_box .btn_box {
+    margin-top: 10px;
+}
+.comment_box .btn_box:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.comment_box .btn_box .right {
+    display: block;
+    width: 17%;
+    text-align: right;
+}
+.comment_box .btn_box .left {
+    display: block;
+    width: 60%;
+}
+.comment_box .btn_box img{
+    width: 57px;
+}
+.fixed_link {
+    position: fixed;
+    bottom: 25px;
+    right: 10px;
+    z-index: 800;
+    width: 80px;
+}
+.fixed_link img {
+    width: 100%;
+}
+
+.footer {
+    background-color: #dadde2;
+}
+.footer .img_box {
+    margin-bottom: 0;
+}
+/* slider */
+.slider {
+    position: relative;
+}
+.slider .title{
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+}
+.slider .img_box {
+    margin: 0;
+}
+.slider .btn_prev,
+.slider .btn_next {
+    width: 38px;
+    height: 61px;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    opacity: 0.7;
+}
+.slider .btn_prev {
+    background-image: url(../images/themes.gif);
+    left: 0;
+    right: auto;
+    background-position: left center;
+}
+.slider .btn_next {
+    background-image: url(../images/themes.gif);
+    left: auto;
+    right: 0;
+    background-position: right center;
+}
+
+/* form */
+.question_box {
+    border-bottom: 1px dashed #939393;
+}
+.question {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+}
+.question b {
+    color: #f00;
+}
+.answer_list {
+    padding: 8px 0;
+    font-size: 0;
+}
+.answer_list .answer {
+    display: inline-block;
+    width: 90px;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.answer_list .answer:nth-child(3n) {
+    width: calc(100% - 180px);
+}
+.answer_list input {
+    margin: 3px;
+}
+.answer_list label {
+    font-size: 14px;
+}
+.user_info {
+    padding: 10px 0;
+    font-size: 14px;
+}
+.user_info .row .label,
+.user_info .row .input {
+    display: table-cell;
+    height: 50px;
+    vertical-align: middle;
+}
+.user_info .row .label{
+    width: 60px;
+    font-weight: bold;
+}
+.user_info .row01 input{ 
+    height: 30px;
+    border: 1px solid #aaaaaa;
+}
+.user_info .row01 .input:nth-child(2) input{
+    width: 80%;
+}
+.user_info .row01 .input:nth-child(4) input{
+    width: 67%;
+}
+.user_info .row02 .input select{
+    width: 30%;
+    height: 35px;
+    font-size: 15px;
+}
+.user_info .row02 .input input{
+    width: 24%;
+    height: 30px;
+    border: 1px solid #aaaaaa;
+}
+.dbform button {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+.dbform .img_title {
+    margin-bottom: 0;
+}
+.dbform01 {
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.dbform01 .form_container {
+    padding: 15px;
+    border: 3px solid #002362;
+}
+.dbform01 button {
+    width: 85%;
+}
+.dbform01 button img {
+    width: 100%;
+}
+.dbform02 {
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.dbform02 .form_container {
+    background-image: url(../images/back.jpg);
+    border-bottom: 1px solid transparent;
+}
+.dbform02 .bg_wh {
+    width: 85%;
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin: 0 auto;
+}
+.dbform02 button {
+    width: 70%;
+    margin-top: 15px;
+}
+.dbform02 button img{
+    width: 100%;
+}
+.dbform02 .db_img {
+    text-align: center;
+}
+.dbform02 .db_img img{
+    width: 90%;
+}
+.dbform02 .result_box {
+    width: 84%;
+    background: #fff;
+    font-size: 16px;
+    line-height: 33px;
+    padding: 10px;
+    margin: 25px auto;
+    font-family: '굴림',sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+.dbform02 .result_box input {
+    width: 20%;
+    height: 15px;
+    text-align: right;
+    padding-right: 4px;
+    border-radius: 5px;
+    border: 1px solid #999999;
+    font-size: 16px;
+}

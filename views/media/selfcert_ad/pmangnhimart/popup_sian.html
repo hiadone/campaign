@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="btn_box">
+            <button class="btn btn-default" onclick="openPopup('pop01')">포스트백 확인자 팝업창</button><br/><br/>
+            <button class="btn btn-default" onclick="openPopup('pop04')">포스트백 미-확인자 팝업창</button><br/><br/>
+            <button class="btn btn-default" onclick="openPopup('pop05')">포스트백 추가 참여자 팝업창</button><br/><br/>
+        </div>
+        <div class="popup_wrap">
+            <div class="popup_container popup_normal" id="pop01">
+                <div class="popup_content">
+                    <div class="popup_text">이벤트 참여가 완료되었습니다</div>
+                    <div class="popup_text_sub">참여해주셔서 감사합니다.</div>
+                </div>
+                <div class="btn_box">
+                    <button class="btn_popup btn-dark" onclick="closePopup('pop01')">확 인</button>
+                </div>
+            </div>
+            <div class="popup_container popup_normal" id="pop04">
+                <div class="popup_content">
+                    <div class="popup_text">
+                        이벤트 참여여부 확인후,<br>
+                        지급될 예정입니다.
+                    </div> 
+                </div>
+                <div class="btn_box">
+                    <button class="btn_popup btn-dark" onclick="closePopup('pop04')">확 인</button>
+                </div>
+            </div>
+            <div class="popup_container popup_normal" id="pop05">
+                <div class="popup_content">
+                    <div class="popup_text">이미 참여하셨습니다.</div>
+                    <div class="popup_text_sub">참여해주셔서 감사합니다.</div>
+                </div>
+                <div class="btn_box">
+                    <button class="btn_popup btn-dark" onclick="closePopup('pop05')">확 인</button>
+                </div>
+            </div>
+            <div class="popup_container popup_scroll_txt" id="pop02">
+                <div class="popup_content">안내메세지 양이 많을때 
+                    (약관 등)
+
+                    생생하며, 무엇이 든 이 이것이다. 오아이스도 그들은 있는 넣는 관현악이며, 이상 그들에게 만천하의 힘있다. 수 청춘에서만 없는 새가 보이는 때문이다. 
+                    싹이 작고 청춘에서만 우리의 것이 것이다. 사랑의 이상 우리 그리하였는가? 있는 이상의 피고 봄날의 황금시대다. 힘차게 지혜는 싶이 뭇 사막이다. 영원히 얼음에 전인 그와 부패를 인류의 있으랴? 그들의 우리는 방황하였으며, 힘차게 고동을 꽃이 가치를 보라. 과실이 뼈 설산에서 같이 이것이다. 그러므로 품으며, 않는 능히 것이다.보라, 할지라도 얼음 이것이다.
+
+용감하고 새가 군영과 무한한 창공에 살았으며, 못할 전인 부패뿐이다. 커다란 웅대한 청춘의 내는 피어나기 그러므로 같이 보라. 보배를 날카로우나 수 고동을 피에 그들에게 풀밭에 전인 가지에 때문이다. 원대하고, 밝은 뼈 기쁘며, 위하여 장식하는 얼마나 끓는다. 인간은 광야에서 커다란 보라. 그들은 꾸며 그들의 피가 가는 그들에게 갑 대중을 부패를 것이다. 인생을 영락과 뜨고, 피에 능히 바이며, 듣는다. 피어나는 뼈 것은 하는 같은 이것이다. 기쁘며, 얼마나 쓸쓸한 못하다 사는가 내는 원대하고, 이 이상은 황금시대다. 싸인 희망의 사랑의 열락의 없으면, 봄날의 석가는 만천하의 끓는다. 새가 풍부하게 인간의 놀이 얼음과 실현에 풀밭에 품에 사막이다.
+
+인생의 맺어, 피어나는 보라. 행복스럽고 반짝이는 이상의 두손을 그것은 천지는 뜨거운지라, 미묘한 운다. 이상의 있음으로써 튼튼하며, 소금이라 뭇 따뜻한 쓸쓸하랴? 기관과 끝에 되는 것은 것이다. 설산에서 동산에는 소담스러운 같이, 든 피다. 행복스럽고 그들의 그들은 대한 풍부하게 영원히 우리의 우리의 끓는다. 인생의 영락과 가장 사는가 불러 같으며, 아니다. 대중을 거친 찾아다녀도, 듣기만 우리의 그들의 방황하여도, 것이다. 많이 피에 낙원을 것이다. 영락과 뭇 타오르고 뜨고, 힘있다.
+                </div>
+                <div class="btn_box">
+                    <button class="btn_popup btn-dark" onclick="closePopup('pop02')">확 인</button>
+                </div>
+            </div>
+            <div class="popup_container popup_normal" id="pop06">
+                <div class="popup_content">
+                    안내 메세지 창입니다<br> 
+                    버튼 2개
+                </div>
+                <div class="btn_box_half clearfix">
+                    <button class="btn_popup btn-silver" onclick="closePopup('pop06')">취 소</button>
+                    <button class="btn_popup btn-dark" onclick="closePopup('pop06')">확 인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var elPopupWrap = document.querySelector('.popup_wrap');
+
+        function openPopup(elId){
+            var el = document.getElementById(elId);
+            elPopupWrap.style.display = "block";
+            el.style.display = "block";
+        }
+        function closePopup(elId){
+            var el = document.getElementById(elId);
+            elPopupWrap.style.display = "none";
+            el.style.display = "none";
+        }
+    </script>
+</body>
+</html>

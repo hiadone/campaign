@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WG자산관리</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul, ol, li, dt, dd {
+            list-style: none;
+        }
+
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', arial, sans-serif;
+            font-size: 100%;
+            color: #333;
+            line-height: 1;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* video:focus {
+            outline: none;
+        } */
+        /* input[type="text"],input[type="number"],input[type="tel"]{
+            text-indent: 5px;
+        } */
+        input,
+        button {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', arial, sans-serif;
+        }
+        .blind {
+            position: absolute;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            margin: -1px;
+            width: 1px;
+            height: 1px;
+        }
+
+        .clearfix:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .wrap {
+            width: 100%;
+            min-width: 320px;
+            max-width: 640px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .img_box,
+        .btn_img {
+            font-size: 0;
+        }
+
+        .btn_img {
+            background-color: transparent;
+            border: none;
+            padding: 0;
+        }
+
+        .img_box .img,
+        .btn_img .img {
+            font-size: 12px;
+            width: 100%;
+        }
+
+        .txt_center {
+            text-align: center;
+        }
+
+        .txt_emph {
+            color: #d51430;
+            font-weight: bold;
+        }
+
+        .txt_bold {
+            font-weight: bold;
+        }
+        /* form */
+        .form_container {
+            padding: 30px 20px 40px;
+            background-color: #f8f9fd;
+        }
+        .form_container .inp_table {
+            width: 100%;
+            border-spacing: 0;
+            border-collapse: collapse;
+            background-color: transparent;
+            margin: 0 auto;
+        }
+        .inp_table .lab_box {
+            color: #000;
+            text-align: right;
+            padding: 0px 10px 0 0;
+            vertical-align: middle;
+            font-size: 14px;
+        }
+        .inp_table .inp_box {
+            color: #000;
+            padding: 5px 10px 5px 0;
+            vertical-align: middle;
+        }
+        .inp_table .inp {
+            box-sizing: border-box;
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+            -webkit-appearance: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+        }
+        .inp_table .inp_age {
+            width: 80px;
+        }
+        .inp_table .inp_select::-ms-expand {
+            display: none;
+        } 
+        .inp_table .inp_select {
+            background: #fff url(images/arrow.png) no-repeat center right;
+        }
+        .form_container .question_container {
+            padding: 5px 0;
+        }
+        .question_container .question_box {
+            padding: 15px 0;
+            text-align: center;
+        }
+        .question_container .question_box ~ .question_box {
+            border-top: 1px dashed #ddd;
+        }
+        .question_container .question {
+            margin-bottom: 15px;
+            font-size: 18px;
+            line-height: 1.4;
+            letter-spacing: -0.8px;
+            color: #88888a;
+        }
+        .question_container .question_q {
+            color: #6accf3;
+            font-weight: bold;
+        }
+        .question_container .lab_answer {
+            display: inline-block;
+            box-sizing: border-box;
+            min-width: 120px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #88888a;
+            background-color: #fff;
+            border: 1px solid #6accf3;
+            padding: 4px 10px;
+            border-radius: 100px;
+            line-height: 1.4;
+        }
+        .question_container .lab_answer:not(:last-child) {
+            margin-right: 5px;
+        }
+        .question_container .inp_answer:checked + .lab_answer {
+            color:#fff;
+        	background-color:#6accf3;
+        }
+        .form_container .agree_box {
+            padding: 15px 0;
+            font-size: 14px;
+            color: #000;
+            font-weight: normal;
+            cursor: pointer;
+        }
+        .agree_box .inp_agree {
+            vertical-align: middle;
+        }
+        .agree_box .lab_agree {
+            padding-left: 5px;
+            vertical-align: middle;
+        }
+        .btn_box .btn_img {
+            max-width: 100%;
+        }
+    </style>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="img_box">
+            <img src="images/c01.jpg" alt="햇살론 사잇돌2" class="img">
+        </div>
+        <div class="img_box">
+            <img src="images/c02.jpg" alt="과도한 채무로 고통 받는 서민을 위한 정부 지원 대출 상품" class="img">
+        </div>
+        <div class="img_box">
+            <img src="images/c03.jpg" alt="질문 답변" class="img">
+        </div>
+        <div class="img_box">
+            <img src="images/c04.jpg" alt="자산 컨설팅 전문 분석팀의 한 층 더 안전한 생활 보장 프로세스" class="img">
+        </div>
+
+        <!-- form -->
+        <div class="form_container">
+            <form onsubmit="return submitContents(this)">
+                <table class="inp_table">
+                    <tbody>
+                        <tr>
+                            <th class="lab_box">
+                                <label for="mlh_name" class="lab">이름</label>
+                            </th>
+                            <td class="inp_box">
+                                <input type="text" name="mlh_name" id="mlh_name" label="이름" class="inp input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="lab_box">
+                                <label for="mlh_mobileno" class="lab">연락처</label>
+                            </th>
+                            <td class="inp_box">
+                                <input type="tel" name="mlh_mobileno" id="mlh_mobileno" label="연락처" class="inp input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="lab_box">
+                                <label for="mlh_age" class="lab">나이</label>
+                            </th>
+                            <td class="inp_box">
+                                <input type="number" name="mlh_age" id="mlh_age" label="나이" class="inp input inp_age"> 세
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="lab_box">
+                                <label for="mlh_job" class="lab">직장</label>
+                            </th>
+                            <td class="inp_box">
+                                <input type="text" name="mlh_job" id="mlh_job" label="직장" class="inp input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="lab_box">
+                                <label for="mlh_salary" class="lab">연봉</label>
+                            </th>
+                            <td class="inp_box">
+                                <input type="text" name="mlh_salary" id="mlh_salary" label="연봉" class="inp input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="lab_box">
+                                <label for="mlh_period" class="lab">재직기간</label>
+                            </th>
+                            <td class="inp_box">
+                                <select name="mlh_period" id="mlh_period" label="재직기간" class="inp input inp_select">
+                                    <option value="">재직기간 선택</option>
+                                    <option value="1-3개월">1-3개월</option>
+                                    <option value="3-6개월">3-6개월</option>
+                                    <option value="1년이상">1년이상</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="question_container">
+                    <div class="question_box">
+                        <div class="question">
+                            <span class="question_q">Q</span> 사대보험에 가입되어 있으신가요?
+                        </div>
+                        <div class="answer">
+                            <input type="radio" name="question01" id="question01_y" class="blind inp_answer">
+                            <label for="question01_y" class="lab_answer">예</label>
+                            <input type="radio" name="question01" id="question01_n" class="blind inp_answer">
+                            <label for="question01_n" class="lab_answer">아니오</label>
+                        </div>
+                    </div>
+                    <div class="question_box">
+                        <div class="question">
+                            <span class="question_q">Q</span> 현재 신용 회복 진행 중인가요?
+                        </div>
+                        <div class="answer">
+                            <input type="radio" name="question02" id="question02_y" class="blind inp_answer">
+                            <label for="question02_y" class="lab_answer">예</label>
+                            <input type="radio" name="question02" id="question02_n" class="blind inp_answer">
+                            <label for="question02_n" class="lab_answer">아니오</label>
+                        </div>
+                    </div>
+                    <div class="question_box">
+                        <div class="question">
+                            <span class="question_q">Q</span> 현재 연체중인 채무가 있으신가요?
+                        </div>
+                        <div class="answer">
+                            <input type="radio" name="question03" id="question03_y" class="blind inp_answer">
+                            <label for="question03_y" class="lab_answer">예</label>
+                            <input type="radio" name="question03" id="question03_n" class="blind inp_answer">
+                            <label for="question03_n" class="lab_answer">아니오</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="agree_box txt_center">
+                    <input type="checkbox" name="agree" id="agree" class="inp_agree" checked> 
+                    <label for="agree" class="lab_agree">개인정보 수집 및 이용동의</label>
+                </div>
+                <div class="btn_box txt_center">
+                    <button class="btn_img"><img src="images/btn.jpg" alt="대출가능 여부 확인하기" class="img"></button>
+                </div>
+            </form>
+        </div>
+        <!-- form end -->
+
+        <div class="img_box">
+            <img src="images/footer.jpg" alt="WG자산관리 사업자등록번호" class="img">
+        </div>
+    </div>
+    <script>
+        // 한글 조사변경
+        function getPostWord(str, firstVal, secondVal) {
+            try {
+                var lastStr = str[str.length - 1].charCodeAt(0);
+                if (lastStr < 0xAC00 || lastStr > 0xD7A3) {
+                    return str;
+                }
+                var lastCharIndex = (lastStr - 0xAC00) % 28;
+                if (lastCharIndex > 0) {
+                    if (firstVal === "으로" && lastCharIndex === 8)
+                        str += secondVal;
+                    else
+                        str += firstVal;
+                } else {
+                    str += secondVal;
+                }
+            } catch (e) {
+                console.error(e);
+            }
+
+            return str;
+        }
+        // firstVal :: 으로 / 을 / 이 / 은 / 과
+        // secondVal :: 로 / 를 / 가 / 는 / 와 
+
+        function submitContents(f) {
+            var flag=false;
+            var href;
+
+
+            $('.input').each(function(){
+                if( ! jQuery.trim($(this).val()) ) {
+                    alert(getPostWord($(this).attr('label'),'을','를') + '입력해 주세요');
+                    $(this).focus();
+                    flag=false;
+                    return false;
+                } else flag=true;
+            });
+
+            if(!flag) return false;
+
+            if($('input[id="agree"]').is(":checked")){
+                //  $('.loading').show();
+                // href = cb_url + '/postact/media_multi_click/' + $('#post_id').val() +'/' + $('#multi_code').val() ;
+
+                // $.ajax({
+                //     async : false,
+                //     url : href,
+                //     type : 'get',
+                //     dataType : 'json',
+                //     complete : function(data) {
+                //         // $("#mlh_mobileno").val($("#mlh_mobileno1").val()+$("#mlh_mobileno2").val()+$("#mlh_mobileno3").val());
+                        
+                //     }
+                // });
+
+                return flag;
+            } else alert('개인정보 수집 및 이용동의를 체크 해주시기 바랍니다.');
+            
+            return false;
+        }
+    </script>
+</body>
+</html>

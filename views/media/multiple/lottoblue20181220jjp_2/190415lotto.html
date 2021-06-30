@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<style>
+		@font-face {
+			font-family: 'BMDOHYEON';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMDOHYEON.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul,
+		li{
+			list-style: none;
+		}
+		.wrap{
+			max-width: 640px;
+			width: 100%;
+			min-height: 100vh;
+			margin: 0 auto;
+			background-color: #e4e4e4;
+		}
+		.img_box{
+			font-size: 0;
+		}
+		.img_box img{
+			width: 100%;
+		}
+		.dbform_box {
+			padding: 3% 6.25%;
+		}
+		.user_info li{
+			font-size: 0;
+			height: 60px;
+			margin-bottom: 4%;
+		}
+		.user_info input{
+			font-size: 24px;
+			width: 100%;
+			height: 100%;
+			padding: 0 0 0 8px;
+			box-sizing: border-box;
+			font-family: 'Apple SD Gothic Neo','Malgun Gothic',arial,sans-serif;
+		}
+		.user_info .user_name,
+		.user_info .user_age{
+			width: 46%;
+		}
+		.user_info .user_name {
+			float: left;
+		}
+		.user_info .user_age {
+			float: right;
+		}
+		.user_info .user_phone {
+			clear: both;
+		}
+		.dbform_box .btn_submit{
+			display: block;
+			max-width: 413px;
+			width: 90%;
+			margin: 0 auto 5%;
+			padding: 14px 0;
+			font-size: 0;
+			background-color: #538cd3;
+			border: none;
+			border-radius: 50px;
+			text-align: center;
+		}
+		.dbform_box .btn_submit img{
+			max-width: 75%;
+		}
+		.dbform_box .check_list {
+			max-width: 320px;
+			margin: 0 auto;
+		}
+		.check_list li {
+			line-height: 1.6;
+		}
+		.check_list input[type="checkbox"] {
+			vertical-align: middle;
+		}
+		.check_list label {
+			font-size: 16px;
+			font-family: 'BMDOHYEON',sans-serif;
+			color: #737372;
+		}
+		.blind{
+			width:1px;
+			height:1px;
+			position:absolute;
+			overflow:hidden;
+			clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+			clip: rect(1px, 1px, 1px, 1px);
+		}
+		@media screen and (max-width: 430px) and (min-width: 5px){
+			.user_info li{
+				height: 48px;
+			}
+			.user_info input{
+				font-size: 16px;
+			}
+			.dbform_box .check_list {
+				max-width: 280px;
+				margin: 0 auto;
+			}
+			.check_list label {
+				font-size: 14px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="img_box"><img src="images/top_01.jpg" alt="로또 1등 당첨 이제는 꿈꿀 수 있다. 번호대공개"></div>
+		<div class="dbform_box">
+			<form action="">
+				<ul class="user_info">
+					<li class="user_name"><label for="" class="blind">이름</label><input type="text" name="" id="" placeholder="이름"></li>
+					<li class="user_age"><label for="" class="blind">나이</label><input type="text" name="" id="" placeholder="나이"></li>
+					<li class="user_phone"><label for="" class="blind">전화번호</label><input type="tel" name="" id="" placeholder="전화번호"></li>
+				</ul>
+				<button type="submit" class="btn_submit"><img src="images/btn.png" alt="무료 당첨번호 받기"></button>
+				<ul class="check_list">
+					<li><input type="checkbox" name="" id="agree01"><label for="agree01"> 개인정보 수집 및 활용동의 &#40;필수&#41;</label></li>
+					<li><input type="checkbox" name="" id="agree02"><label for="agree02"> 개인정보 제 3자 제공동의 &#40;필수&#41;</label></li>
+					<li><input type="checkbox" name="" id="agree03"><label for="agree03"> 광고성 문자메세지/알림톡 수신 동의 &#40;필수&#41;</label></li>
+				</ul>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

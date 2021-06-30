@@ -1,0 +1,66 @@
+
+
+
+
+body {
+	margin: 0px; padding: 0px; font-family: "Malgun Gothic", arial, Tahoma, sans-serif; font-size: 12px;
+}
+h1 {
+	margin: 0px; padding: 0px; font-family: "Malgun Gothic", arial, Tahoma, sans-serif; font-size: 12px;
+}
+h2 {
+	margin: 0px; padding: 0px; font-family: "Malgun Gothic", arial, Tahoma, sans-serif; font-size: 12px;
+}
+img {
+	border: currentColor; border-image: none;
+}
+a {
+	color: rgb(0, 0, 0); text-decoration: none;
+}
+#con {
+	padding: 10px 8px;
+}
+h1 {
+	line-height: 28px; font-family: "맑은 고딕"; font-size: 23px; font-weight: bold;
+}
+h2 {
+	padding: 10px 0px; color: rgb(0, 102, 204); line-height: 24px; font-family: "맑은 고딕"; font-size: 16px; font-weight: bold; border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.date {
+	padding: 10px 0px; text-align: right; color: rgb(102, 102, 102); font-family: "맑은 고딕"; font-size: 14px;
+}
+.body_txt {
+	text-align: justify; color: rgb(51, 51, 51); line-height: 28px; letter-spacing: -0.5px; font-family: "맑은 고딕"; font-size: 16px; -ms-word-break: break-all;
+}
+.body_txt p {
+	text-align: justify; color: rgb(51, 51, 51); line-height: 28px; letter-spacing: -0.5px; font-family: "맑은 고딕"; font-size: 16px; -ms-word-break: break-all;
+}
+.viewport {
+	margin: 0px auto; width: 100%; overflow: hidden; padding-top: 4%; padding-bottom: 4%; position: relative; -webkit-transform: translateZ(0);
+}
+
+
+
+img { max-width:100%; vertical-align:bottom; }
+
+
+/* form style */
+.form-class {
+  display: inline-block;
+  width: 20%;
+  height: 26px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  border: 1px solid #a9a9a9;
+  border-radius: 0px;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+textarea.form-class { height: auto; }
+
+.form-class.inputs ~ .inputs { 
+	margin-left:5px;
+}

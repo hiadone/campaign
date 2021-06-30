@@ -1,0 +1,122 @@
+#wrap {width:100%; margin-left:auto; margin-right:auto; position:relative; padding-bottom:65px; }
+#wrap .container { position:relative;}
+
+@media only screen and (min-width: 641px) {
+#wrap {width:640px;}
+}
+@media (min-width:375px) { 
+	#wrap { 
+		padding-bottom:75px;
+	}
+}
+@media (min-width:414px) { 
+	#wrap { 
+		padding-bottom:80px;
+	}
+}
+@media (min-width:640px) { 
+	#wrap { 
+		padding-bottom:95px;
+	}
+}
+@media (min-width:768px) { 
+	#wrap { 
+		padding-bottom:100px;
+	}
+}
+
+#movie { 
+	position:relative;
+	width:100%;
+	height:0;
+	overflow:hidden;
+	padding-bottom:52.87%;
+}
+#movie iframe { 
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	width:100%;
+	height:100%;
+}
+
+/* 상담문의 */
+#inDB { background:#0a2d5b; color:#fff; padding:20px 10px; }
+#inDB a > img  { max-width:70%; }
+
+
+img { max-width:100%; vertical-align:bottom; }
+ 
+.form-class {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+textarea.form-class { 
+	height:auto;
+	resize:none;
+}
+
+table { width:95%; }
+table th { color:#fff; vertical-align:middle; }
+table td { padding:5px 0; }
+
+footer { 
+	position: fixed;
+	width:100%;
+	bottom:0;
+	left:0;
+	text-align:center;
+	z-index:99;
+	cursor:pointer;
+}
+footer img { 
+	max-width:100%;
+	vertical-align:bottom;
+}
+
+/*default*/
+* { 
+	 font-family:'NanumGothic', 'Dotum', 'Verdana', 'Helvetica', 'Apple-Gothic', 'Helvetica-Bold'; color:#000000;
+	outline:none;
+	padding:0;margin:0;
+	border:0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+html {overflow-y:scroll;-webkit-text-size-adjust: none;}
+html, body {width:100%; height:100%; background-color:#fff;}
+h1, h2, h3, h4, h5, h6, ul, ol, li,dl, dt, dd, fieldset, p {list-style:none;}
+table {border-collapse: collapse; border-spacing: 0;  table-layout:fixed; }
+caption, fieldset, legend{display: none;border:0;}
+
+
+
+/* Link Style */
+a:link									{text-decoration:none;}
+a:visited								{text-decoration:none;}
+a:hover									{text-decoration:none;}
+a:active								{text-decoration:none;}
+
+/* align */
+.a-center {text-align:center; margin-top:15px;}
+.a-right {text-align:right;}
+.a-left {text-align:left;}
