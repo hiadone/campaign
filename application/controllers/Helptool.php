@@ -1157,4 +1157,59 @@ class Helptool extends CB_Controller
         $this->layout = element('layout_skin_file', element('layout', $view));
         $this->view = element('view_skin_file', element('layout', $view));
     }
+
+    public function click_627_view($mlh_id=0)
+    {
+        $view = array();
+        $view['view'] = array();
+
+        
+
+        
+
+        $mlh_id = (int) $mlh_id;
+        if (empty($mlh_id) OR $mlh_id < 1) {
+            alert('잘못된 접근입니다');
+            return false;
+        }
+
+        
+        $this->load->model('Media_tenping_history_model');
+        $post = $this->Media_tenping_history_model->get_one($mlh_id);
+
+        if ( ! element('mlh_id', $post)) {
+            alert('존재하지 않는 게시물입니다');
+            return false;
+        }
+
+        
+
+        
+        
+
+        $view['view']['data'] = $post;
+
+        $view['view']['data']['display_name'] = element('mlh_name', $post);
+        $view['view']['data']['display_datetime'] = display_datetime(element('mlh_datetime', $post));
+
+
+        /**
+         * 레이아웃을 정의합니다
+         */
+        $page_title = element('post_title', $post) . ' > 자세히';
+        $layoutconfig = array(
+            'path' => 'helptool',
+            'layout' => 'layout_popup',
+            'skin' => 'click_627_view',
+            'layout_dir' => $this->cbconfig->item('layout_helptool'),
+            'mobile_layout_dir' => $this->cbconfig->item('mobile_layout_helptool'),
+            'skin_dir' => $this->cbconfig->item('skin_helptool'),
+            'mobile_skin_dir' => $this->cbconfig->item('mobile_skin_helptool'),
+            'page_title' => $page_title,
+        );
+        $view['layout'] = $this->managelayout->front($layoutconfig, $this->cbconfig->get_device_view_type());
+        $this->data = $view;
+        $this->layout = element('layout_skin_file', element('layout', $view));
+        $this->view = element('view_skin_file', element('layout', $view));
+    }
 }

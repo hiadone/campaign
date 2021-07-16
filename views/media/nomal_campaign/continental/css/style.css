@@ -1,0 +1,143 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+
+html, body { height:100%; }
+html {
+   -ms-overflow-style: -ms-autohiding-scrollbar;
+    -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
+body {
+    font-family: "Noto Sans KR", "나눔바른고딕", 'Nanum Barun Gothic', "맑은 고딕", 'Malgun Gothic',  Helvetica, Arial, sans-serif;
+    color:#1b1b1b;
+    font-size: 16px;
+    line-height: 1.42857143;
+    font-weight: 400;
+    position: relative;
+    background-color: #191919;
+}
+body * { text-shadow: none; }
+::-moz-selection { /* Code for Firefox */
+    color: red;
+    background: yellow;
+}
+::selection { /* 드래그 활성화시 스타일 */
+    color: red;
+    background: yellow;
+}
+* {
+    outline:none;
+    padding:0;margin:0;
+    border:0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+article, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+img { max-width:100%; vertical-align: bottom; }
+a { color: inherit; text-decoration: none; }
+a:visited { color:#000; }
+a:hover,
+a:active { color: inherit; }
+table {
+    border-spacing: 0;
+    border-collapse: collapse !important;
+    background-color: transparent;
+}
+ul,ol { list-style:none; }
+
+.container {
+    position: relative;
+    width:100%;
+    margin:0 auto;
+}
+@media (min-width:800px) {
+    .container { width:768px; }
+}
+section { position: relative; text-align:center; }
+.form-group { padding:0 10px 50px;}
+.form-box { background-color: #fff; padding-bottom:30px; }
+.list-group { padding:20px; }
+.list-group .item ~ .item { padding-top:20px; }
+.list-group .item p { font-size:18px; margin-bottom:5px; }
+.list-group .item p.summary { font-size: 16px; letter-spacing:-1px; }
+.list-group .item li { text-align:justify; color:#818181; font-size: 14px; letter-spacing:-.9px; }
+.btn-group { padding:0 20px; }
+.btn-group button {
+    background-image: none;
+    background-color: transparent;
+}
+.sns-group { margin:30px 0; }
+.sns-group a { margin:0 15px; }
+.sns-group p { font-size:16px !important; font-weight:500; letter-spacing:-.5px; }
+.col-group { margin:0 -5px; }
+.col-group .col {
+   position: relative;
+   float:left; 
+   width:33.33333%;
+   padding:0 5px;
+}
+.input-class {
+    font-family: "Noto Sans KR", "나눔바른고딕", 'Nanum Barun Gothic', "맑은 고딕", 'Malgun Gothic',  Helvetica, Arial, sans-serif;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #000;
+    border: 1px solid #9a9a9a;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+textarea.input-class { height: auto; resize: none; margin-bottom:10px; }
+select.input-class { background: transparent url('../images/ic-select.png') no-repeat 98% 50% /10px; }
+summary.ex { text-align:right; font-size: 12px; color:#696969; margin-top:5px; }
+.checkbox { display:inline-block; font-size: 14px; font-weight:500;  margin-top:20px; }
+.checkbox input {
+    position: relative;
+    top:2px;
+    margin-right:5px;
+}
+
+.ic { display:inline-block; width:40px;height:40px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.ic-fb { background-image: url('../images/ic-fb.png'); }
+.ic-insta { background-image: url('../images/ic-insta.png'); }
+.ic-yt { background-image: url('../images/ic-yt.png'); }
+
+
+@media (min-width:800px) {
+    .list-group { padding:40px 30px; }
+    .list-group .item ~ .item { padding-top:40px; }
+    .list-group .item p { font-size:26px; margin-bottom:10px; }
+    .list-group .item p.summary { font-size: 22px; margin-bottom:10px; }
+    .list-group .item li { text-align:justify; color:#818181; font-size: 16px; letter-spacing:-.9px; }
+    .checkbox { font-size: 18px; font-weight:500;  margin-top:20px; }
+    .sns-group { margin:50px 0; }
+    .sns-group a { margin:0 30px; }
+    .sns-group p { font-size:28px !important; margin-top:15px; }
+    .ic { width:75px; height:75px; }
+    .input-class { font-size: 18px; height: 55px; }
+    summary.ex { font-size:16px; }
+    select.input-class { background-size:18px; }
+}
+
+.col-group:after {
+    content: "";
+    clear:both;
+    display:table;
+}

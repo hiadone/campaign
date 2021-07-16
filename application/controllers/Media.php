@@ -146,9 +146,41 @@ class Media extends CB_Controller
                 'label' => '연락처',
                 'rules' => 'trim|required|valid_mobile|callback__mlh_mobileno_dupcheck[' . $this->input->post('post_id') . ']',
             ),
-            
+
+            array(
+                'field' => 'mlh_email',
+                'label' => '이메일',
+                'rules' => 'trim|required|valid_email|max_length[50]',
+            ),
+            array(
+                'field' => 'mem_address1',
+                'label' => '주소',
+                'rules' => 'trim|required',
+            ),
+            array(
+                'field' => 'mem_address1',
+                'label' => '주소',
+                'rules' => 'trim|required',
+            ),
+            array(
+                'field' => 'etc_val10',
+                'label' => '자동차 제조사',
+                'rules' => 'trim|required',
+            ),
+            array(
+                'field' => 'etc_val11',
+                'label' => '차량 모델명',
+                'rules' => 'trim|required',
+            ),
+
+            array(
+                'field' => 'etc_val11',
+                'label' => '차량 모델명',
+                'rules' => 'trim|required',
+            ),
             
         );
+
 
       
         $this->form_validation->set_rules($config);
@@ -180,6 +212,14 @@ class Media extends CB_Controller
                 show_404();
             }
 
+            $mlh_memo ='';
+            if($this->input->post('post_id') === '627'){
+                $mlh_text = $this->input->post('mlh_text',null,'') .'||'.$this->input->post('mlh_text2',null,'');
+                $mlh_memo = $this->input->post('mem_address1',null,'') ;
+            } else {
+                $mlh_text = $this->input->post('mlh_text',null,'');
+            }
+
             $insertdata = array(
                 'post_id' => $this->input->post('post_id'),
                 'mlh_name' => $this->input->post('mlh_name',null,''),
@@ -191,8 +231,9 @@ class Media extends CB_Controller
                 'mlh_datetime' => cdate('Y-m-d H:i:s'),
                 'mlh_ip' => $this->input->ip_address(),
                 'mlh_referer' => $this->agent->referrer(),
-                'mlh_text' => $this->input->post('mlh_text',null,''),
+                'mlh_text' => $mlh_text,
                 'mlh_status' => 1,
+                'mlh_memo' => $mlh_memo,
                 $this->media_key => $this->input->post($this->media_key,null,''),
             );
 

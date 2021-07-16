@@ -54,10 +54,12 @@ if(element('post_id',element('post',$view)) === "89"){
 
         <div class="col-md-12">
             <div class="pull-left">
-                
+            <?php 
+            if(element('post_id',element('post',$view)) !== '627'){
+            ?>
                 <button type="button" onClick="post_multi_action('media_multi_status_update', '2', '선택하신 항목을 무효처리 하시겠습니까?','<?php echo element('brd_key',element('board',$view))?>');" class="btn btn-danger btn-sm">선택무효</button>
                 <button type="button" onClick="post_multi_action('media_multi_status_update', '1', '선택하신 항목을 휴효처리 하시겠습니까?','<?php echo element('brd_key',element('board',$view))?>');" class="btn btn-success btn-sm">선택유효</button>
-                
+            <?php } ?>  
             </div>
             <div class=" ">
                 <form class="navbar-form navbar-right pull-right" action="<?php echo site_url(uri_string()); ?>" onSubmit="return postSearch(this);">
@@ -146,17 +148,30 @@ if(element('post_id',element('post',$view)) === "89"){
                     <th><input onclick="if (this.checked) all_boardlist_checked(true); else all_boardlist_checked(false);" type="checkbox" /></th>
                     <th>번호</a></th>
                     <th>이름</th>
-                    <th>나이</th>
-                    <th>핸드폰번호</th>                    
-                    <th class="mlh_gender">성별</th>
-                    <th>신청일시</th>
-                    <th class="per40">문의사항</th>
-                    <th>상태</th>
-                    <th>사유</th>
+                    <?php 
+                    if(element('post_id',element('post',$view)) === '627'){
+                    ?>
+                        <th>이메일</th>
+                        <th>핸드폰번호</th>
+                        <th>신청일시</th>
+                        <th>주소</th>
+                        <th >임하는 각오</th>
+                        <th >action</th>
+                    <?php } else { ?>
+                        <th>나이</th>
+                        <th>핸드폰번호</th>                    
+                        <th class="mlh_gender">성별</th>
+                        <th>신청일시</th>
+                        <th class="per40">문의사항</th>
+                        <th>상태</th>
+                        <th>사유</th>
+                        <th><small>API상태</small></th>
+                        <th><small>전송일</small></th>
+                    <?php }?>
+                    
+
                     
                     
-                    <th><small>API상태</small></th>
-                    <th><small>전송일</small></th>
             
                 </tr>
             </thead>
@@ -176,24 +191,41 @@ if(element('post_id',element('post',$view)) === "89"){
                     <th scope="row"><input type="checkbox" name="chk_post_id[]" value="<?php echo element('mlh_id', $result); ?>" id="chk_mlh_id_<?php echo element('mlh_id', $result); ?>"  /></th>
                     <td><?php echo number_format(element('num', $result)); ?></td>
                     <td><?php echo element('display_name', $result); ?></td>
-                    <td><?php echo (element('mlh_age', $result)); ?> 세</td>
-                    <td><?php echo is_phone(element('mlh_mobileno', $result)) ? get_phone(element('mlh_mobileno', $result)):(element('mlh_mobileno', $result)); ?></td>                    
-                    <td class="mlh_gender"><?php echo element('mlh_gender', $result) === '2' ? '남성' : '여성'; ?></td>
-                    <td><?php echo element('display_datetime', $result) ?></td>
-                    <td><?php echo html_escape(element('mlh_text', $result)) ?></td>
-                    <!-- <td><a href="<?php echo goto_url(element('mlh_referer', $result)); ?>" target="_blank"><?php echo element('mlh_referer', $result); ?></a></td> -->
-                    <td><a href="javascript:post_action_media('media_status_update', '<?php echo element('mlh_id', $result);?>','<?php echo element('brd_key',element('board',$view))?>', '<?php echo element('mlh_status', $result) ==='1' ? '2':'1';?>');" class="btn <?php echo element('mlh_status', $result) ==='1' ? 'btn-success':'btn-danger';?> btn-xs"><?php echo element('mlh_status', $result) === '1' ? '유효' : '무효'; ?></a></td>
-                    <td><input type="text" class="px100"   name="mlh_memo[<?php echo element('mlh_id', $result);?>]" id="mlh_memo_<?php echo element('mlh_id', $result);?>" data-mlh_id="<?php echo element('mlh_id', $result);?>" value="<?php echo html_escape(element('mlh_memo', $result)) ?>" /></td>
+
+                    <?php 
+                    if(element('post_id',element('post',$view)) === '627'){
+                    ?>
+                        <td><?php echo (element('mlh_email', $result)); ?></td>
+                        
+                        <td><?php echo is_phone(element('mlh_mobileno', $result)) ? get_phone(element('mlh_mobileno', $result)):(element('mlh_mobileno', $result)); ?></td>
+                        <td><?php echo element('display_datetime', $result) ?></td>
+                        <td><?php echo html_escape(element('mlh_memo', $result)) ?></td>
+
+                        
+                        <td><?php echo html_escape(element(0,explode("||",element('mlh_text', $result)))) ?></td>
+                        <td><button type="button" onClick="click_627_view(<?php echo element('mlh_id', $result) ?>);" class="btn btn-outline btn-danger btn-sm mr10" >자세히</button> </td>
+                    <?php } else { ?>
+                        <td><?php echo (element('mlh_age', $result)); ?> 세</td>
+                        <td><?php echo is_phone(element('mlh_mobileno', $result)) ? get_phone(element('mlh_mobileno', $result)):(element('mlh_mobileno', $result)); ?></td>                    
+                        <td class="mlh_gender"><?php echo element('mlh_gender', $result) === '2' ? '남성' : '여성'; ?></td>
+                        <td><?php echo element('display_datetime', $result) ?></td>
+                        <td><?php echo html_escape(element('mlh_text', $result)) ?></td>
+                        <!-- <td><a href="<?php echo goto_url(element('mlh_referer', $result)); ?>" target="_blank"><?php echo element('mlh_referer', $result); ?></a></td> -->
+                        <td><a href="javascript:post_action_media('media_status_update', '<?php echo element('mlh_id', $result);?>','<?php echo element('brd_key',element('board',$view))?>', '<?php echo element('mlh_status', $result) ==='1' ? '2':'1';?>');" class="btn <?php echo element('mlh_status', $result) ==='1' ? 'btn-success':'btn-danger';?> btn-xs"><?php echo element('mlh_status', $result) === '1' ? '유효' : '무효'; ?></a></td>
+                        <td><input type="text" class="px100"   name="mlh_memo[<?php echo element('mlh_id', $result);?>]" id="mlh_memo_<?php echo element('mlh_id', $result);?>" data-mlh_id="<?php echo element('mlh_id', $result);?>" value="<?php echo html_escape(element('mlh_memo', $result)) ?>" /></td>
+
+                        
+                        <?php
+                         
+                            if(element('mlh_api_flag2', $result) === "1") echo "<td>".element('mlh_msg2', $result)."</td>";
+                            else echo "<td>-</td>";
+
+                            echo "<td>".element('display_rst2_datetime', $result,'-')."</td>";
+                          
+                         ?>
+                    <?php }?>
 
                     
-                    <?php
-                     
-                        if(element('mlh_api_flag2', $result) === "1") echo "<td>".element('mlh_msg2', $result)."</td>";
-                        else echo "<td>-</td>";
-
-                        echo "<td>".element('display_rst2_datetime', $result,'-')."</td>";
-                      
-                     ?>
                 </tr>
             <?php
                 }
@@ -211,8 +243,12 @@ if(element('post_id',element('post',$view)) === "89"){
     <div class="border_button">
         <div class="pull-left mr10">
             <a href="<?php echo element('list_url', element('list', $view)); ?>" class="btn btn-default btn-sm">전체목록</a>
+            <?php 
+            if(element('post_id',element('post',$view)) !== '627'){
+            ?>
             <a href="<?php echo element('list_url', element('list', $view)); ?>?tenpingstatus=1" class="btn btn-success btn-sm">유효목록</a>
             <a href="<?php echo element('list_url', element('list', $view)); ?>?tenpingstatus=2" class="btn btn-danger btn-sm">무효목록</a>
+            <?php } ?>
         </div>
         <div class="box-info">
             <div class="btn-group pull-right" role="group" aria-label="...">

@@ -63,17 +63,25 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
             if (element('link_count', $view) > 0) { ?>
                 <li class="list-group-item list-group-item-info bold">미디어 랜딩 URL</li>
             <?php
-                foreach (element('link', $view) as $key => $value) {
-            
-                
+
+                if(element('post_id', element('post', $view)) === '627'){
                 ?>
-                    <li class="list-group-item"><i class="fa fa-link"></i> <a href="<?php echo element('link_link', $value) ?>" target="_blank"><?php echo html_escape(element('link_link', $value)); ?></a><span class="badge ml20" style="float:none;"><a href="<?php echo base_url('stat/real_click_list/'.element('brd_key', element('board',$view)));?>?post_id_[]=<?php echo element('post_id', element('post', $view)); ?>" target="_blank" style="color:inherit;">통계 보러 가기</a> </span>
-                        <?php if (element('show_url_qrcode', element('board', $view))) { ?>
-                            <span class="url-qrcode"  data-qrcode-url="<?php echo urlencode(element('link_link', $value)); ?>"><i class="fa fa-qrcode"></i></span>
-                        <?php } ?>
+                    <li class="list-group-item"><i class="fa fa-link"></i> <a href="//continental-experience.co.kr" target="_blank">http://continental-experience.co.kr</a>
+                        
                     </li>
-                <?php
+            <?php      } else { 
+                    foreach (element('link', $view) as $key => $value) {
+                
                     
+                    ?>
+                        <li class="list-group-item"><i class="fa fa-link"></i> <a href="<?php echo element('link_link', $value) ?>" target="_blank"><?php echo html_escape(element('link_link', $value)); ?></a><span class="badge ml20" style="float:none;"><a href="<?php echo base_url('stat/real_click_list/'.element('brd_key', element('board',$view)));?>?post_id_[]=<?php echo element('post_id', element('post', $view)); ?>" target="_blank" style="color:inherit;">통계 보러 가기</a> </span>
+                            <?php if (element('show_url_qrcode', element('board', $view))) { ?>
+                                <span class="url-qrcode"  data-qrcode-url="<?php echo urlencode(element('link_link', $value)); ?>"><i class="fa fa-qrcode"></i></span>
+                            <?php } ?>
+                        </li>
+                    <?php
+                        
+                    }
                 }
             }
             ?>

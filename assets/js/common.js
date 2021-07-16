@@ -637,6 +637,10 @@ if (typeof(COMMON_JS) === 'undefined') {
         window.open(cb_url + '/helptool/link_click_log/' + post_id , 'win_link_click_log', 'left=100,top=100,width=620,height=500,scrollbars=1');
         return false;
     }
+    function click_627_view( mlh_id) {
+        window.open(cb_url + '/helptool/click_627_view/' + mlh_id , 'click_627_view', 'left=100,top=100,width=620,height=500,scrollbars=1');
+        return false;
+    }
     function post_copy(type, post_id) {
         window.open(cb_url + '/helptool/post_copy/' + type + '/' + post_id, 'win_post_copy', 'left=100,top=100,width=620,height=500,scrollbars=1');
         return false;
