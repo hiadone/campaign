@@ -66,7 +66,7 @@ if (element('syntax_highlighter', element('board', $view)) OR element('comment_s
 
                 if(element('post_id', element('post', $view)) === '627'){
                 ?>
-                    <li class="list-group-item"><i class="fa fa-link"></i> <a href="//continental-experience.co.kr" target="_blank">http://continental-experience.co.kr</a>
+                    <li class="list-group-item"><i class="fa fa-link"></i> <a href="http://continental-experience.co.kr" target="_blank">http://continental-experience.co.kr</a>
                         
                     </li>
             <?php      } else { 
