@@ -151,12 +151,13 @@ $this->managelayout->add_js('//dmaps.daum.net/map_js_init/postcode.v2.js');
 				<input type="hidden" name="mem_address3"  value="">
 				<input type="hidden" name="mem_address4"  value="">
 				<div class="list-group">
+					<summary class="warning">* 표시는 필수 입력 항목 입니다.</summary>
 					<div class="item">
-						<p>이름</p>
+						<p>이름<mark>*</mark></p>
 						<input type="text" name="mlh_name" id="mlh_name"  class="input-class input" label="이름" value="<?php echo set_value('mlh_name', element('mlh_name', element('post', $view))); ?>" />
 					</div>
 					<div class="item">
-						<p>휴대폰 번호</p>
+						<p>휴대폰 번호<mark>*</mark></p>
 						<div class="col-group">
 							<div class="col">
 								<select name="mlh_mobileno1" id="mlh_mobileno1" class="input-class input" label="연락처" />
@@ -175,11 +176,11 @@ $this->managelayout->add_js('//dmaps.daum.net/map_js_init/postcode.v2.js');
 						</div>
 					</div>
 					<div class="item">
-						<p>이메일 주소</p>
+						<p>이메일 주소<mark>*</mark></p>
 						<input type="email" name="mlh_email" id="mlh_email"  class="input-class input" label="이메일" value="<?php echo set_value('mlh_email', element('mlh_email', element('post', $view))); ?>" />
 					</div>
 					<div class="item">
-						<p>주소</p>
+						<p>주소<mark>*</mark></p>
 						<small>(타이어 장착 희망 지역 및 기념품 발송을 위한 정보입니다.)</small>
 						<input type="text" onclick="win_zip('fwrite', 'mem_zipcode', 'mem_address1', 'mem_address2', 'mem_address3', 'mem_address4');" name="mem_address1" id="mem_address1" value="<?php echo set_value('mem_address1', element('mem_address1', element('post', $view))); ?>" class="input-class input" readonly="readonly" label="주소" />
 					</div>
@@ -220,7 +221,8 @@ $this->managelayout->add_js('//dmaps.daum.net/map_js_init/postcode.v2.js');
 						<input type="text" name="etc_val9" value="<?php echo set_value('etc_val9', element('etc_val9', element('post', $view))); ?>" class="input-class" />
 					</div>
 					<div class="item">
-						<p>자동차 제조사</p>
+						
+						<p>자동차 제조사<mark>*</mark></p>
 						<select name="etc_val10" class="input-class option" label="자동차 제조사" />
 							<option value="">선택</option>
 
@@ -275,12 +277,12 @@ $this->managelayout->add_js('//dmaps.daum.net/map_js_init/postcode.v2.js');
 						</select>
 					</div>
 					<div class="item">
-						<p>차량 모델명</p>
+						<p>차량 모델명<mark>*</mark></p>
 						<input type="text" name="etc_val11" value="<?php echo set_value('etc_val11', element('etc_val11', element('post', $view))); ?>" class="input-class input" label="차량 모델명" />
 						<summary class="ex">예) E클래스, G80, 5시리즈</summary>
 					</div>
 					<div class="item">
-						<p>타이어 사이즈(전륜)</p>
+						<p>타이어 사이즈(전륜)<mark>*</mark></p>
 						<div class="col-group">
 							<div class="col">
 								<select name="front_size_1" id="front_size_1" class="input-class option" label="전륜 단면폭" />
@@ -322,7 +324,7 @@ $this->managelayout->add_js('//dmaps.daum.net/map_js_init/postcode.v2.js');
 						</div>
 					</div>
 					<div class="item">
-						<p>타이어 사이즈(후륜)</p>
+						<p>타이어 사이즈(후륜)<mark>*</mark></p>
 						<div class="col-group">
 							<div class="col">
 								<select name="back_size_1" id="back_size_1" class="input-class option" label="후륜 단면폭" />
